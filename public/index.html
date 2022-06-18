@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- ICONS -->
+      <script src="https://kit.fontawesome.com/a2c234ef4d.js" crossorigin="anonymous"></script>
+
+      <!-- Link Swiper's CSS -->
+      <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+
+      <!-- JQuery CDN -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <!-- Select2 CDN -->
+      <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
+      <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
+
+      <!-- STYLES/CSS files -->
+      <link rel="stylesheet" href="./style.css" />
+
+      <title>Memekar Store</title>
+   </head>
+   <body>
+      <!-- Header Contents -->
+      <header id="header">
+         <!-- Top Bar -->
+         <div class="top_bar">
+            <span> ⚡️ आमच्या सारखे आम्हीच ⚡️ </span>
+         </div>
+
+         <!-- Navbar / Navigation Menu -->
+         <nav class="bg-white border-t-2 border-b-2 border-black">
+            <div class="container nav_content">
+               <div class="primary_links">
+                  <a href="#header" class="nav_link">Home</a>
+                  <a href="#shop" class="nav_link">Store</a>
+                  <div class="dropdown group">
+                     <a href="#collab" class="nav_link">Collab <i class="fas fa-angle-down"></i> </a>
+                     <div class="dropdown_menu hidden group-hover:block">
+                        <a href="#">Sub-1</a>
+                        <a href="#">Sub-1</a>
+                        <a href="#">Sub-1</a>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="nav_logo">
+                  <a href="#header"><img src="./img/logo.png" alt="LOGO" /></a>
+               </div>
+
+               <div class="secondary_liks">
+                  <a href="#" class="hidden nav_link">Home</a>
+                  <a href="#" class="hidden nav_link">Store</a>
+                  <a href="#" class="hidden nav_link">Collab</a>
+                  <a href="#login" class="nav_link">Login</a>
+                  <a href="#signup" class="nav_link">Signup</a>
+                  <a href="#" class="ml-4">
+                     <div class="cart_icon">
+                        <img src="./img/cart.png" class="w-full block" alt="CartIcon" />
+                        <div class="cart_tag">
+                           <span class="text-xs text-white">9</span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <!-- Mobile Menu Button -->
+               <div class="lg:hidden menu_btns">
+                  <div class="menu_btn">
+                     <img onclick="openNav()" id="menu_btn" src="./img/menu-toggle.png" class="block" />
+                  </div>
+                  <div class="menu_close_btn">
+                     <img onclick="closeNav()" id="cross_btn" src="./img/icon.png" class="hidden" />
+                  </div>
+               </div>
+               <!--Mobile menu content-->
+               <div class="overlay" id="mobileNav">
+                  <div class="overlay_content container">
+                     <a onclick="closeNav()" class="nav_link" href="#header">Home</a>
+                     <a onclick="closeNav()" class="nav_link" href="#shop">Shop</a>
+                     <a onclick="closeNav()" class="nav_link" href="#collab">Collab</a>
+                     <a onclick="closeNav()" class="nav_link" href="#login">Login</a>
+                     <a onclick="closeNav()" class="nav_link" href="#signup">Signup</a>
+                     <a onclick="closeNav()" class="nav_link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                  </div>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!-- Main contents / page contents -->
+      <main>
+         <!-- Category Section -->
+
+         <!--Shopify Section-->
+
+         <!-- Featured Section -->
+
+         <!-- Signup Page Section -->
+
+         <!-- Login Page Section -->
+
+         <!-- Forgot Password Page -->
+
+         <!-- Password reset email sent -->
+
+         <!-- Password reset form page/2 -->
+
+         <!-- Password reset successful page -->
+
+         <!--Mobile Number Verify-->
+
+         <!--Email ID Verify page-->
+
+         <!--Email Verify page with form-->
+
+         <!-- Product Details Page -->
+
+         <!-- Cart Page -->
+
+         <!--Checkout Page-->
+
+         <!--Payment Page-->
+
+         <!--User Dashboard Page-->
+
+         <!--Review Section-->
+      </main>
+
+      <!--User Order Dashboard Page-->
+
+      <!--User Info Dashboard Page-->
+
+      <!--User address Dashboard Page-->
+
+      <!--User address form Dashboard Page-->
+
+      <!-- FOOTER SECTION -->
+      <footer class="footer_section">
+         <div class="container my-4 py-14">
+            <div class="f_content">
+               <div class="left_content">
+                  <div class="f_logo">
+                     <a href="#">
+                        <img src="./img/logo.png" alt="LOGO" />
+                     </a>
+                  </div>
+                  <div class="f_input">
+                     <input type="email" name="email" id="email" placeholder="Enter your Email" />
+                     <div class="f_input_icon">
+                        <button type="submit"><i class="far fa-envelope"></i></button>
+                     </div>
+                  </div>
+                  <div class="f_icons">
+                     <a href="#"><i class="fab fa-facebook"></i></a>
+                     <a href="#"><i class="fab fa-instagram"></i></a>
+                     <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  </div>
+               </div>
+               <div class="right_content">
+                  <div class="f_links">
+                     <a href="#" class="f_link">Contact Us</a>
+                     <a href="#" class="f_link">Our Story </a>
+                  </div>
+                  <div class="f_links">
+                     <a href="#" class="f_link">Shipping & Tracking</a>
+                     <a href="#" class="f_link">Return & Replacement</a>
+                  </div>
+                  <div class="f_links">
+                     <a href="#" class="f_link">Terms And Privacy Policy</a>
+                     <a href="#" class="f_link">Size Guide</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer_bottom">
+            <div class="container f_last">
+               <div class="payment_icons">
+                  <a href="#">
+                     <img src="./img/mastercard.svg" alt="Mastercard" />
+                  </a>
+
+                  <a href="#">
+                     <img src="./img/visa.svg" alt="Visacard" />
+                  </a>
+
+                  <a href="#">
+                     <img src="./img/amex.svg" alt="" />
+                  </a>
+
+                  <a href="#">
+                     <img src="./img/paypal.svg" alt="" />
+                  </a>
+                  <a href="#">
+                     <img src="./img/maestro.svg" alt="" />
+                  </a>
+                  <a href="#">
+                     <img src="./img/klarna.svg" alt="" />
+                  </a>
+               </div>
+               <p class="text-gray-700 text-sm">© 2020 Memekar. Media. — Store -- All rights reserved</p>
+            </div>
+         </div>
+      </footer>
+
+      <!-- JS -->
+      <script src="./main.js"></script>
+
+      <script>
+         $(document).ready(function () {
+            $(".select_options").select2();
+         });
+      </script>
+
+      <!-- Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <!-- Initialize Swiper -->
+      <script>
+         var swiper = new Swiper(".BannerSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: false,
+            autoplay: {
+               delay: 3000,
+               disableOnInteraction: false,
+            },
+         });
+
+         var swiper = new Swiper(".featuredProductSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: false,
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+               640: {
+                  slidesPerView: 2,
+                  spaceBetween: 20,
+               },
+               768: {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+               },
+               1024: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+               },
+            },
+         });
+      </script>
+   </body>
+</html>
