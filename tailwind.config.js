@@ -8,16 +8,17 @@ module.exports = {
       },
       extend: {
          colors: {
-            primary_clr: "#F7D031",
-            secondary_clr: "#43B85C",
+            clr_primary: "#212806",
+            clr_secondary: "#f5eee6",
             purple_bg: "#EECFFE",
-            clr_gray: "#F5F5F5",
+            clr_black: "#1E1E1E",
+            clr_white: "#FCF8F3",
          },
       },
       container: {
          center: true,
          padding: {
-            DEFAULT: "1rem",
+            DEFAULT: "0.5rem",
             sm: "1rem",
             md: "1rem",
             lg: "1.5rem",

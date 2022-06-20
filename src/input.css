@@ -1,11 +1,289 @@
+/* Custom Fonts */
+@font-face {
+   font-family: "Tiempos Text";
+   src: url("../public/fonts/TiemposText-Regular.ttf");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Tiempos Light";
+   src: url("../public/fonts/TiemposHeadline-Light.ttf");
+   font-weight: 300;
+   font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* BASE Layer Custom Designs */
 @layer base {
-   html,
-   body {
+   html {
       @apply scroll-smooth;
    }
+   body {
+      font-family: "Tiempos Text";
+   }
+}
+
+/* Components  Layer Custom Design*/
+@layer components {
+   /* Common Components */
+   .page_title {
+      @apply capitalize w-full md:text-center pt-8 text-3xl lg:text-4xl xl:text-5xl font-bold;
+   }
+
+   .title {
+      @apply capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center px-4 py-8 font-bold;
+   }
+
+   .card {
+      @apply cursor-pointer relative block;
+   }
+
+   .related_p_card {
+      @apply max-w-[400px] cursor-pointer relative;
+   }
+
+   .card_title {
+      @apply text-3xl text-center px-2 py-4 font-bold;
+   }
+
+   .card_container {
+      @apply overflow-hidden block;
+   }
+
+   .card_img {
+      @apply relative object-cover transition-all duration-300 hover:transform hover:scale-105;
+   }
+
+   .card_body {
+      @apply flex flex-col space-y-1 pl-2 pr-4 pt-2 pb-2;
+   }
+
+   /* Card Tags */
+   .hot_sale_tag {
+      @apply bg-[#FFA500] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
+
+   .discount_sale_tag {
+      @apply bg-[#FF0000] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
+
+   .stock_out_tag {
+      @apply bg-[#B7B7B7] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
+
+   .add_to_cart_snippet {
+      @apply bg-clr_primary text-sm border-4 border-white w-8 h-8 rounded-full absolute -top-4 -right-4 flex items-center justify-center
+       transition-all duration-300 hover:transform hover:scale-125 z-30;
+   }
+
+   .add_to_cart_snippet > a {
+      @apply block;
+   }
+
+   .price {
+      @apply flex font-semibold;
+   }
+
+   .pagination {
+      @apply flex justify-center items-center space-x-4;
+   }
+   .paging {
+      @apply border-2 border-black px-2 py-1 lg:px-4 cursor-pointer;
+   }
+
+   /* ... */
+
+   .btn_sm {
+      @apply w-[120px];
+   }
+
+   .btn_md {
+      @apply w-[200px];
+   }
+
+   .alert_box {
+      @apply max-w-[500px] absolute right-4 bottom-4 left-4 sm:bottom-5 sm:right-5 sm:left-auto z-50 transition-all duration-300;
+   }
+
+   .alert {
+      @apply px-4 py-2 flex space-x-8 items-center;
+   }
+   .alert-error {
+      @apply bg-red-100 border border-red-400 text-red-700;
+   }
+   .alert-success {
+      @apply bg-green-200 border border-green-400 text-green-700;
+   }
+   .message {
+      @apply block;
+   }
+
+   /* .alert_close_btn {
+      @apply px-2 py-2;
+   } */
+
+   /*---------------------- Main Contnet --------------------- */
+   .main_content {
+      @apply mt-16;
+   }
+
+   .products_grid_layout {
+      @apply mt-8 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-16 lg:grid-cols-3 lg:gap-x-12;
+   }
+}
+
+/* ------------------------------ CUSTOM classes & DESIGNS ---------------------- */
+/* Header Section/Content */
+.top_bar {
+   @apply relative bg-clr_primary py-2 flex space-x-4 justify-center text-clr_white uppercase text-xs tracking-wider;
+}
+
+.top_bar > span {
+   font-family: "Tiempos Light";
+}
+
+.dektop_only {
+   @apply hidden lg:flex lg:space-x-4 items-center;
+}
+
+/* Navbar Design */
+.navbar {
+   @apply bg-transparent;
+}
+.nav_content {
+   @apply py-4 flex justify-between items-center text-lg;
+}
+
+.primary_links {
+   @apply hidden items-center lg:flex lg:space-x-4;
+}
+
+.nav_logo {
+   @apply w-24 ml-4 sm:ml-0;
+}
+.nav_logo > a > img {
+   @apply block object-cover;
+}
+
+.secondary_liks {
+   @apply flex items-center lg:space-x-4 pr-3 sm:mr-0;
+}
+
+.cart_icon {
+   @apply relative w-5;
+}
+.cart_tag {
+   @apply bg-clr_black w-5 h-5 rounded-full absolute -top-2 -right-4 flex justify-center items-center;
+}
+
+.nav_link {
+   @apply capitalize transition-transform hover:italic;
+}
+
+.active_link {
+   @apply italic font-semibold;
+}
+
+/* Sticky Nav */
+.sticky_nav {
+   @apply sticky top-0 left-0 right-0 bottom-auto z-50 bg-clr_white;
+}
+
+/* Mobile-Nav */
+.overlay {
+   @apply w-0 h-full fixed bg-clr_secondary top-[96px] left-0 z-40 transition-all duration-500 overflow-x-hidden;
+}
+.overlay_scroll {
+   @apply w-0 h-full fixed bg-clr_secondary top-[94px] left-0 z-40 transition-all duration-300 overflow-x-hidden;
+}
+
+.overlay_content {
+   @apply text-clr_primary relative w-full h-full  pt-4 flex flex-col space-y-3 text-2xl;
+}
+
+.menu_btns {
+   @apply cursor-pointer font-bold text-center;
+}
+
+.menu_btn {
+   @apply block w-6;
+}
+
+.menu_close_btn {
+   @apply block w-5;
+}
+
+/*-------------------- HOME PAGE DESIGN ------------------- */
+
+.header_banner {
+   @apply w-full relative -top-16 left-0 right-0 -z-10;
+}
+
+.banner_img {
+   @apply w-full;
+}
+
+.banner_img > img {
+   @apply block object-cover w-full;
+}
+
+/* .banner_btn {
+   @apply w-44 flex space-x-3 items-center bg-clr_primary text-clr_white rounded-3xl py-2 justify-center;
+} */
+
+/* ---------------------------- Footer Designs ---------------------------- */
+.footer_section {
+   @apply bg-clr_primary text-clr_white;
+}
+
+.footer_top {
+   @apply flex justify-between items-center;
+}
+
+.f_logo {
+   @apply w-36 object-cover;
+}
+
+.f_social_links {
+   @apply flex space-x-8;
+}
+
+.f_content {
+   @apply grid grid-cols-2 gap-y-16 gap-x-4 lg:grid-cols-4 lg:gap-x-6 lg:gap-y-0 xl:gap-x-10 2xl:gap-x-14;
+}
+
+.f_links {
+   @apply flex flex-col;
+}
+
+.footer_heading {
+   @apply text-lg border-b-[1px] border-clr_white w-full pb-8;
+}
+
+.f_links_content {
+   @apply mt-8 flex flex-col space-y-4;
+}
+
+.f_link {
+   @apply text-clr_white transition hover:text-white;
+}
+
+.f_icons {
+   @apply text-3xl flex space-x-4;
+}
+
+.footer_bottom {
+   @apply text-clr_white;
+}
+
+.f_last {
+   @apply py-4 flex flex-col space-y-8 items-center justify-center lg:flex-row-reverse lg:space-y-0 lg:justify-between;
+}
+
+.privacy_policy {
+   @apply capitalize flex space-x-6;
 }

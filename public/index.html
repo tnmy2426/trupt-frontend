@@ -9,7 +9,7 @@
       <script src="https://kit.fontawesome.com/a2c234ef4d.js" crossorigin="anonymous"></script>
 
       <!-- Link Swiper's CSS -->
-      <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
       <!-- JQuery CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -21,79 +21,132 @@
       <!-- STYLES/CSS files -->
       <link rel="stylesheet" href="./style.css" />
 
-      <title>Memekar Store</title>
+      <title>Trupt Store</title>
    </head>
    <body>
-      <!-- Header Contents -->
-      <header id="header">
-         <!-- Top Bar -->
-         <div class="top_bar">
-            <span> ⚡️ आमच्या सारखे आम्हीच ⚡️ </span>
+      <!-- Top Bar -->
+      <div class="top_bar">
+         <span> free shipping in the U.S. on all orders </span>
+         <div class="dektop_only">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect
+                  x="0.707107"
+                  y="7.5"
+                  width="9.6066"
+                  height="9.6066"
+                  transform="rotate(-45 0.707107 7.5)"
+                  fill="#BABBA6"
+                  stroke="#424928"
+               />
+               <rect
+                  x="1.91218"
+                  y="7.5"
+                  width="7.90193"
+                  height="7.90193"
+                  transform="rotate(-45 1.91218 7.5)"
+                  fill="#F5EEE6"
+                  stroke="#F5EEE6"
+               />
+            </svg>
+            <span>plastic free delivery | 100% recyclable.</span>
          </div>
+      </div>
+      <!-- Header Contents -->
+      <!-- <header id="header"> -->
+      <!-- Navbar / Navigation Menu -->
+      <nav class="navbar">
+         <div class="container nav_content">
+            <!-- Mobile Menu Button -->
+            <div class="lg:hidden menu_btns">
+               <div class="menu_btn">
+                  <img onclick="openNav()" id="menu_btn" src="./img/icons/menu-toggle.png" class="block" />
+               </div>
+               <div class="menu_close_btn">
+                  <img onclick="closeNav()" id="cross_btn" src="./img/icons/icon.png" class="hidden" />
+               </div>
+            </div>
 
-         <!-- Navbar / Navigation Menu -->
-         <nav class="bg-white border-t-2 border-b-2 border-black">
-            <div class="container nav_content">
-               <div class="primary_links">
-                  <a href="#header" class="nav_link">Home</a>
-                  <a href="#shop" class="nav_link">Store</a>
-                  <div class="dropdown group">
-                     <a href="#collab" class="nav_link">Collab <i class="fas fa-angle-down"></i> </a>
-                     <div class="dropdown_menu hidden group-hover:block">
-                        <a href="#">Sub-1</a>
-                        <a href="#">Sub-1</a>
-                        <a href="#">Sub-1</a>
+            <div class="nav_logo">
+               <a href="#header"><img src="./img/logo.png" alt="LOGO" /></a>
+            </div>
+
+            <div class="primary_links">
+               <a href="#header" class="nav_link active_link">Greeting Cards</a>
+               <a href="#shop" class="nav_link">Assorted Card Sets</a>
+               <a href="#shop" class="nav_link">Notebooks</a>
+               <!-- <div class="dropdown group">
+                           <a href="#collab" class="nav_link">Notebooks <i class="fas fa-angle-down"></i> </a>
+                           <div class="dropdown_menu hidden group-hover:block">
+                              <a href="#">Sub-1</a>
+                              <a href="#">Sub-1</a>
+                              <a href="#">Sub-1</a>
+                           </div>
+                        </div> -->
+            </div>
+
+            <div class="secondary_liks">
+               <a href="#" class="ml-4">
+                  <div class="cart_icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                           d="M8.36652 24.3173L6.14429 14.3173C5.72795 12.4438 7.15361 10.6665 9.07286 10.6665H22.9265C24.8457 10.6665 26.2714 12.4438 25.8551 14.3173L23.6328 24.3173C23.3278 25.6899 22.1104 26.6665 20.7043 26.6665H11.2951C9.88898 26.6665 8.67154 25.6899 8.36652 24.3173Z"
+                           stroke="#212806"
+                        />
+                        <path
+                           d="M12.3638 13.7779V8.96986C12.3638 6.96155 13.9918 5.3335 16.0001 5.3335V5.3335C18.0084 5.3335 19.6365 6.96155 19.6365 8.96986V13.7779"
+                           stroke="#212806"
+                        />
+                     </svg>
+                     <div class="cart_tag">
+                        <span class="text-xs text-white">3</span>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <!--Mobile menu content-->
+            <div class="overlay" id="mobileNav">
+               <div class="overlay_content container">
+                  <a onclick="closeNav()" class="nav_link" href="#header">Greeting Cards</a>
+                  <a onclick="closeNav()" class="nav_link" href="#shop">Assorted Card Sets</a>
+                  <a onclick="closeNav()" class="nav_link" href="#collab">Notebooks</a>
+                  <a onclick="closeNav()" class="nav_link" href="#login">Login</a>
+                  <a onclick="closeNav()" class="nav_link" href="#signup">Signup</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- </header> -->
+      <!-- Banner Section -->
+      <div class="header_banner">
+         <div class="swiper BannerSwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <div class="banner_img">
+                     <div class="mobile_view sm:hidden">
+                        <img src="./img/banner/04.jpg" alt="Banner" />
+                     </div>
+                     <div class="desktop_view hidden sm:block">
+                        <img src="./img/banner/03.jpg" alt="Banner" />
                      </div>
                   </div>
                </div>
 
-               <div class="nav_logo">
-                  <a href="#header"><img src="./img/logo.png" alt="LOGO" /></a>
-               </div>
-
-               <div class="secondary_liks">
-                  <a href="#" class="hidden nav_link">Home</a>
-                  <a href="#" class="hidden nav_link">Store</a>
-                  <a href="#" class="hidden nav_link">Collab</a>
-                  <a href="#login" class="nav_link">Login</a>
-                  <a href="#signup" class="nav_link">Signup</a>
-                  <a href="#" class="ml-4">
-                     <div class="cart_icon">
-                        <img src="./img/cart.png" class="w-full block" alt="CartIcon" />
-                        <div class="cart_tag">
-                           <span class="text-xs text-white">9</span>
-                        </div>
+               <div class="swiper-slide">
+                  <div class="banner_img">
+                     <div class="mobile_view sm:hidden">
+                        <img src="./img/banner/04.jpg" alt="Banner" />
                      </div>
-                  </a>
-               </div>
-               <!-- Mobile Menu Button -->
-               <div class="lg:hidden menu_btns">
-                  <div class="menu_btn">
-                     <img onclick="openNav()" id="menu_btn" src="./img/menu-toggle.png" class="block" />
-                  </div>
-                  <div class="menu_close_btn">
-                     <img onclick="closeNav()" id="cross_btn" src="./img/icon.png" class="hidden" />
-                  </div>
-               </div>
-               <!--Mobile menu content-->
-               <div class="overlay" id="mobileNav">
-                  <div class="overlay_content container">
-                     <a onclick="closeNav()" class="nav_link" href="#header">Home</a>
-                     <a onclick="closeNav()" class="nav_link" href="#shop">Shop</a>
-                     <a onclick="closeNav()" class="nav_link" href="#collab">Collab</a>
-                     <a onclick="closeNav()" class="nav_link" href="#login">Login</a>
-                     <a onclick="closeNav()" class="nav_link" href="#signup">Signup</a>
-                     <a onclick="closeNav()" class="nav_link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                     <div class="desktop_view hidden sm:block">
+                        <img src="./img/banner/03.jpg" alt="Banner" />
+                     </div>
                   </div>
                </div>
             </div>
-         </nav>
-      </header>
+         </div>
+      </div>
 
       <!-- Main contents / page contents -->
       <main>
-         <!-- Category Section -->
-
          <!--Shopify Section-->
 
          <!-- Featured Section -->
@@ -140,67 +193,70 @@
       <!-- FOOTER SECTION -->
       <footer class="footer_section">
          <div class="container my-4 py-14">
+            <div class="footer_top mb-14">
+               <div class="f_logo">
+                  <a href="#">
+                     <img src="./img/logo.png" alt="LOGO" />
+                  </a>
+               </div>
+               <div class="f_social_links">
+                  <a href="#">Facebook</a>
+                  <a href="#">Instagram</a>
+               </div>
+            </div>
             <div class="f_content">
-               <div class="left_content">
-                  <div class="f_logo">
-                     <a href="#">
-                        <img src="./img/logo.png" alt="LOGO" />
-                     </a>
+               <div class="f_links">
+                  <div class="footer_heading">
+                     <h6>Shop</h6>
                   </div>
-                  <div class="f_input">
-                     <input type="email" name="email" id="email" placeholder="Enter your Email" />
-                     <div class="f_input_icon">
-                        <button type="submit"><i class="far fa-envelope"></i></button>
-                     </div>
-                  </div>
-                  <div class="f_icons">
-                     <a href="#"><i class="fab fa-facebook"></i></a>
-                     <a href="#"><i class="fab fa-instagram"></i></a>
-                     <a href="#"><i class="fab fa-whatsapp"></i></a>
+                  <div class="f_links_content">
+                     <a href="#" class="f_link">Shop all</a>
+                     <a href="#" class="f_link">Greeting Cards </a>
+                     <a href="#" class="f_link"> Card sets </a>
+                     <a href="#" class="f_link">Notebooks </a>
                   </div>
                </div>
-               <div class="right_content">
-                  <div class="f_links">
-                     <a href="#" class="f_link">Contact Us</a>
-                     <a href="#" class="f_link">Our Story </a>
+               <div class="f_links">
+                  <div class="footer_heading">
+                     <h6>About</h6>
                   </div>
-                  <div class="f_links">
-                     <a href="#" class="f_link">Shipping & Tracking</a>
-                     <a href="#" class="f_link">Return & Replacement</a>
+                  <div class="f_links_content">
+                     <a href="#" class="f_link">Our story</a>
+                     <a href="#" class="f_link">Our values</a>
+                     <a href="#" class="f_link">Blog</a>
+                     <a href="#" class="f_link">Sustainability</a>
                   </div>
-                  <div class="f_links">
-                     <a href="#" class="f_link">Terms And Privacy Policy</a>
-                     <a href="#" class="f_link">Size Guide</a>
+               </div>
+               <div class="f_links">
+                  <div class="footer_heading">
+                     <h6>Customer Care</h6>
+                  </div>
+                  <div class="f_links_content">
+                     <a href="#" class="f_link">Contact us</a>
+                     <a href="#" class="f_link">FAQs</a>
+                     <a href="#" class="f_link">Return & Exchange</a>
+                     <a href="#" class="f_link">Support</a>
+                  </div>
+               </div>
+               <div class="f_links">
+                  <div class="footer_heading">
+                     <h6>Wholesale</h6>
+                  </div>
+                  <div class="f_links_content">
+                     <a href="#" class="f_link">Overview</a>
+                     <a href="#" class="f_link">Register as a Wholesaler</a>
+                     <a href="#" class="f_link">Access the Wholesale Store</a>
                   </div>
                </div>
             </div>
          </div>
          <div class="footer_bottom">
             <div class="container f_last">
-               <div class="payment_icons">
-                  <a href="#">
-                     <img src="./img/mastercard.svg" alt="Mastercard" />
-                  </a>
-
-                  <a href="#">
-                     <img src="./img/visa.svg" alt="Visacard" />
-                  </a>
-
-                  <a href="#">
-                     <img src="./img/amex.svg" alt="" />
-                  </a>
-
-                  <a href="#">
-                     <img src="./img/paypal.svg" alt="" />
-                  </a>
-                  <a href="#">
-                     <img src="./img/maestro.svg" alt="" />
-                  </a>
-                  <a href="#">
-                     <img src="./img/klarna.svg" alt="" />
-                  </a>
+               <div class="privacy_policy">
+                  <a href="#">privacy & policy</a>
+                  <a href="#">Terms & Conditions</a>
                </div>
-               <p class="text-gray-700 text-sm">© 2020 Memekar. Media. — Store -- All rights reserved</p>
+               <p>© 2020 Trupt. — Store -- All rights reserved</p>
             </div>
          </div>
       </footer>
@@ -208,11 +264,11 @@
       <!-- JS -->
       <script src="./main.js"></script>
 
-      <script>
+      <!-- <script>
          $(document).ready(function () {
             $(".select_options").select2();
          });
-      </script>
+      </script> -->
 
       <!-- Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -228,32 +284,6 @@
             autoplay: {
                delay: 3000,
                disableOnInteraction: false,
-            },
-         });
-
-         var swiper = new Swiper(".featuredProductSwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            slidesPerGroup: 1,
-            loop: true,
-            loopFillGroupWithBlank: false,
-            navigation: {
-               nextEl: ".swiper-button-next",
-               prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-               640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-               },
-               768: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-               },
-               1024: {
-                  slidesPerView: 4,
-                  spaceBetween: 30,
-               },
             },
          });
       </script>
