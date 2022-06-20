@@ -636,72 +636,85 @@ body {
 
 /* Common Components */
 
-.title {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  text-transform: capitalize;
-}
+/* .page_title {
+      @apply capitalize w-full md:text-center pt-8 text-3xl lg:text-4xl xl:text-5xl font-bold;
+   } */
 
-@media (min-width: 768px) {
-  .title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-}
+/* .title {
+      @apply capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center px-4 py-8 font-bold;
+   } */
 
-@media (min-width: 1024px) {
-  .title {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
+/* .card {
+      @apply cursor-pointer relative block;
+   }
 
-@media (min-width: 1280px) {
-  .title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
+   .related_p_card {
+      @apply max-w-[400px] cursor-pointer relative;
+   }
+
+   .card_title {
+      @apply text-3xl text-center px-2 py-4 font-bold;
+   }
+
+   .card_container {
+      @apply overflow-hidden block;
+   }
+
+   .card_img {
+      @apply relative object-cover transition-all duration-300 hover:transform hover:scale-105;
+   }
+
+   .card_body {
+      @apply flex flex-col space-y-1 pl-2 pr-4 pt-2 pb-2;
+   }  */
 
 /* Card Tags */
 
-/* ... */
+/* .hot_sale_tag {
+      @apply bg-[#FFA500] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
 
-.alert_box {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  z-index: 50;
-  max-width: 500px;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-}
+   .discount_sale_tag {
+      @apply bg-[#FF0000] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
 
-@media (min-width: 640px) {
-  .alert_box {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    left: auto;
-  }
-}
+   .stock_out_tag {
+      @apply bg-[#B7B7B7] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
+   }
 
-/* .alert_close_btn {
-      @apply px-2 py-2;
+   .add_to_cart_snippet {
+      @apply bg-clr_primary text-sm border-4 border-white w-8 h-8 rounded-full absolute -top-4 -right-4 flex items-center justify-center
+       transition-all duration-300 hover:transform hover:scale-125 z-30;
+   }
+
+   .add_to_cart_snippet > a {
+      @apply block;
+   }
+
+   .price {
+      @apply flex font-semibold;
    } */
 
-/*---------------------- Main Contnet --------------------- */
+/* .pagination {
+      @apply flex justify-center items-center space-x-4;
+   }
+   .paging {
+      @apply border-2 border-black px-2 py-1 lg:px-4 cursor-pointer;
+   } */
 
-.main_content {
-  margin-top: 4rem;
-}
+/* ... */
+
+/* .btn_sm {
+      @apply w-[120px];
+   }
+
+   .btn_md {
+      @apply w-[200px] rounded-3xl;
+   }
+
+   .btn_outline {
+      @apply border-[1px] bg-clr_white border-clr_primary transition hover:bg-clr_primary hover:text-clr_white;
+   } */
 
 .sticky {
   position: -webkit-sticky;
@@ -948,7 +961,7 @@ body {
 
 .overlay_scroll {
   position: fixed;
-  top: 94px;
+  top: 64px;
   left: 0px;
   z-index: 40;
   height: 100%;
@@ -1007,10 +1020,12 @@ body {
   left: 0px;
   right: 0px;
   z-index: -10;
+  margin-bottom: -4rem;
   width: 100%;
 }
 
 .banner_img {
+  max-height: 95vh;
   width: 100%;
 }
 
@@ -1021,9 +1036,185 @@ body {
      object-fit: cover;
 }
 
-/* .banner_btn {
-   @apply w-44 flex space-x-3 items-center bg-clr_primary text-clr_white rounded-3xl py-2 justify-center;
-} */
+/*-------------------- Sustainability section DESIGN ------------------- */
+
+.sustainability_section {
+  overflow-x: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 248 243 / var(--tw-bg-opacity));
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.sustainability_content {
+  position: relative;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Positioning Images */
+
+.left_top_pos {
+  position: absolute;
+  top: -3rem;
+  left: 0px;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .left_top_pos {
+    left: 3rem;
+  }
+}
+
+.left_bottom_pos {
+  position: absolute;
+  bottom: 4rem;
+  left: -1rem;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .left_bottom_pos {
+    bottom: 1rem;
+    left: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .left_bottom_pos {
+    left: 4rem;
+    bottom: -1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .left_bottom_pos {
+    left: 9rem;
+  }
+}
+
+.right_mid_pos {
+  position: absolute;
+  right: -1rem;
+  top: 45%;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .right_mid_pos {
+    top: 50%;
+    right: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right_mid_pos {
+    top: 15%;
+    right: 2.5rem;
+  }
+}
+
+.main_head {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_head > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+@media (min-width: 1024px) {
+  .main_head {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+}
+
+.main_head > h4 {
+  z-index: 20;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .main_head > h4 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main_head > h4 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+.main_head > h4 {
+  line-height: 120%;
+}
+
+.btn_main {
+  display: flex;
+  width: 12rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_main > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.btn_main {
+  border-radius: 1.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(33 40 6 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 248 243 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(33 40 6 / var(--tw-text-opacity));
+}
+
+.rounded_img {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 9999px;
+}
+
+@media (min-width: 640px) {
+  .rounded_img {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rounded_img {
+    height: 9rem;
+    width: 9rem;
+  }
+}
+
+.rounded_img > img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 /* ---------------------------- Footer Designs ---------------------------- */
 

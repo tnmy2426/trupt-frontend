@@ -24,6 +24,7 @@
       <title>Trupt Store</title>
    </head>
    <body>
+      <!-- Header Contents -->
       <!-- Top Bar -->
       <div class="top_bar">
          <span> free shipping in the U.S. on all orders </span>
@@ -51,8 +52,7 @@
             <span>plastic free delivery | 100% recyclable.</span>
          </div>
       </div>
-      <!-- Header Contents -->
-      <!-- <header id="header"> -->
+
       <!-- Navbar / Navigation Menu -->
       <nav class="navbar">
          <div class="container nav_content">
@@ -115,7 +115,7 @@
             </div>
          </div>
       </nav>
-      <!-- </header> -->
+
       <!-- Banner Section -->
       <div class="header_banner">
          <div class="swiper BannerSwiper">
@@ -147,7 +147,33 @@
 
       <!-- Main contents / page contents -->
       <main>
-         <!--Shopify Section-->
+         <!--Sustainability Section-->
+         <section class="sustainability_section">
+            <div class="container sustainability_content">
+               <div class="main_head">
+                  <h4>Our smallest choices have the potential for the biggest impact. Let’s make good ones together.</h4>
+                  <a href="#" class="btn_main">
+                     <span>Sustainability</span>
+                     <img src="./img/icons/arrow.svg" alt="arrow" />
+                  </a>
+               </div>
+               <div class="left_top_pos">
+                  <div class="rounded_img">
+                     <img src="./img/gallery/gallery1.jpg" alt="gal1" />
+                  </div>
+               </div>
+               <div class="left_bottom_pos">
+                  <div class="rounded_img">
+                     <img src="./img/gallery/gallery2.jpg" alt="gal2" />
+                  </div>
+               </div>
+               <div class="right_mid_pos">
+                  <div class="rounded_img">
+                     <img src="./img/gallery/gallery2.jpg" alt="gal2" />
+                  </div>
+               </div>
+            </div>
+         </section>
 
          <!-- Featured Section -->
 
@@ -263,6 +289,14 @@
 
       <!-- JS -->
       <script src="./main.js"></script>
+
+      <!-- AOS Script -->
+      <script>
+         AOS.init({
+            offset: 120,
+            duration: 1200,
+         });
+      </script>
 
       <!-- <script>
          $(document).ready(function () {
