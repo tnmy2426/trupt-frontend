@@ -1,15 +1,22 @@
 /* Custom Fonts */
 @font-face {
-   font-family: "Tiempos Text";
-   src: url("../public/fonts/TiemposText-Regular.ttf");
+   font-family: "Nexa Light";
+   src: url("../fonts/Nexa\ Light.otf");
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "Nexa Regular";
+   src: url("../fonts/Nexa\ Regular.otf");
    font-weight: normal;
    font-style: normal;
 }
 
 @font-face {
-   font-family: "Tiempos Light";
-   src: url("../public/fonts/TiemposHeadline-Light.ttf");
-   font-weight: 300;
+   font-family: "Nexa Bold";
+   src: url("../fonts/Nexa\ Bold.otf");
+   font-weight: bold;
    font-style: normal;
 }
 
@@ -23,7 +30,16 @@
       @apply scroll-smooth;
    }
    body {
-      font-family: "Tiempos Text";
+      font-family: "Nexa Regular";
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "Nexa Bold";
    }
 }
 
@@ -34,9 +50,9 @@
       @apply capitalize w-full md:text-center pt-8 text-3xl lg:text-4xl xl:text-5xl font-bold;
    } */
 
-   /* .title {
-      @apply capitalize text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center px-4 py-8 font-bold;
-   } */
+   .title {
+      @apply capitalize text-2xl md:text-3xl text-center;
+   }
 
    /* .card {
       @apply cursor-pointer relative block;
@@ -217,13 +233,13 @@
 
 /* Positioning Images */
 .left_top_pos {
-   @apply absolute -top-12 left-0 z-10 lg:left-12;
+   @apply absolute -top-12 left-0 z-10 lg:left-12 xl:left-28;
 }
 .left_bottom_pos {
-   @apply absolute bottom-16 -left-4 z-10 sm:bottom-4 sm:left-4 md:left-16 md:-bottom-4 lg:left-36;
+   @apply absolute bottom-20 left-4 z-10 sm:bottom-4 sm:left-4 md:left-16 md:-bottom-4 lg:left-48 lg:bottom-8 xl:left-60;
 }
 .right_mid_pos {
-   @apply absolute -right-4 top-[45%] sm:top-1/2 sm:right-0 z-10 lg:top-[15%] lg:right-10;
+   @apply absolute -right-4 top-[50%] sm:top-1/2 sm:right-0 z-10 lg:top-[15%] lg:right-10 xl:right-20;
 }
 
 .main_head {
@@ -245,6 +261,229 @@
 }
 .rounded_img > img {
    @apply block object-cover w-full h-full rounded-full;
+}
+
+/*-------------------- Product Demo section DESIGN ------------------- */
+
+.product_demo {
+   @apply bg-clr_black py-36 relative;
+}
+
+.vertical_line_top {
+   @apply hidden lg:block absolute top-0 left-0 right-0 mx-auto w-1 h-20 z-30 bg-clr_secondary;
+}
+
+.vertical_line_bottom {
+   @apply hidden lg:block absolute bottom-0 left-0 right-0 mx-auto w-1 h-20 z-30 bg-clr_secondary;
+}
+
+.product_demo_content {
+   @apply grid grid-cols-1 gap-y-20 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-12 xl:gap-x-14 2xl:gap-x-16;
+}
+
+.product_img_demo {
+   @apply w-full flex justify-center items-center;
+}
+
+.product_img_demo > img {
+   @apply block object-cover max-h-[420px];
+}
+
+.product_demo_details {
+   @apply mx-auto max-w-[420px] grid grid-cols-1 gap-y-4 text-clr_secondary text-center;
+}
+
+.product_demo_subtitle {
+   @apply flex space-x-4 items-center w-full justify-center;
+}
+.line_wrapper {
+   @apply w-28 h-[2px] bg-clr_secondary;
+}
+
+.product_demo_details > h4 {
+   @apply text-5xl;
+}
+.product_demo_details > h4 {
+   line-height: 120%;
+}
+
+.product_demo_details > p {
+   line-height: 28px;
+   letter-spacing: 0.3rem;
+}
+
+.product_demo_details > a {
+   letter-spacing: 0.1rem;
+   margin: 0 auto;
+   margin-top: 2rem;
+}
+
+.product_demo_btn {
+   @apply uppercase w-48 flex border-[1px] border-clr_secondary bg-transparent  py-3 justify-center items-center;
+}
+
+/*-------------------- Featured Product section DESIGN ------------------- */
+
+.featured_product {
+   @apply relative bg-[#D2784E] py-36;
+}
+
+/* Marquee Animation */
+
+.marquee_container {
+   overflow: hidden !important;
+}
+
+.marquee {
+   width: 100%;
+   font-size: 5.6vw;
+   line-height: 1;
+   z-index: 1;
+   text-transform: uppercase;
+   white-space: nowrap;
+   color: #1e1e1e;
+   transform: translateX(-100%);
+   -webkit-transform: translateX(-100%);
+   -moz-transform: translateX(-100%);
+   -ms-transform: translateX(-100%);
+   -o-transform: translateX(-100%);
+}
+
+.marquee_text {
+   animation: marquee 100s linear infinite running;
+   -webkit-animation: marquee 100s linear infinite running;
+}
+
+@keyframes marquee {
+   to {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+   }
+}
+
+.f_product_content {
+   @apply sm:px-20 grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-10 xl:gap-x-14 2xl:gap-x-20;
+}
+
+.f_product_img {
+   @apply m-auto max-w-[320px] max-h-[600px];
+}
+
+.f_product_img > img {
+   @apply block object-cover w-full h-full;
+}
+
+.f_product_details {
+   @apply m-auto text-center;
+}
+.details_wrapper {
+   @apply max-w-[370px] grid grid-cols-1 gap-y-4;
+}
+.details_wrapper > img {
+   @apply block mx-auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   width: 72px !important;
+   height: 72px !important;
+   opacity: 1;
+   text-transform: uppercase;
+   font-size: 16px;
+   background: #c4531e;
+   color: #ffffff;
+   top: 50%;
+   transition: all 0.3s ease;
+   -webkit-transition: all 0.3s ease;
+   -moz-transition: all 0.3s ease;
+   -ms-transition: all 0.3s ease;
+   -o-transition: all 0.3s ease;
+   border-radius: 100%;
+   -webkit-border-radius: 100%;
+   -moz-border-radius: 100%;
+   -ms-border-radius: 100%;
+   -o-border-radius: 100%;
+   border: 1px solid #ffffff;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+   background: #1e1e1e;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+   content: "";
+}
+
+.details_wrapper > p {
+   letter-spacing: 0.2rem;
+}
+
+.f_product_btn {
+   @apply uppercase text-[#FFFCF2] w-48 flex border-[1px] border-[#B7ADA1] bg-clr_black  py-3 justify-center items-center rounded;
+}
+
+/* ---------------------------- Instagram gallery Designs ---------------------------- */
+.insta_gallery {
+   @apply py-20 bg-clr_white;
+}
+
+.insta_gal_head {
+   @apply mx-auto w-full lg:w-[70%] flex flex-col space-y-4;
+}
+
+.insta_head_img {
+   @apply block object-cover mx-auto;
+}
+
+.horizontal_divider {
+   @apply h-1 w-6 bg-[#8e9373] mx-auto;
+}
+
+.insta_heading {
+   @apply w-full text-2xl sm:text-3xl lg:text-4xl text-center pt-2;
+}
+
+.insta_gal_imgs {
+   @apply w-full relative h-[50vh] mt-20 lg:mt-0;
+}
+
+.insta_img_1 {
+   @apply absolute -top-6 left-3 w-16 lg:w-24;
+}
+
+.insta_img_2 {
+   @apply absolute top-8 sm:top-12 left-[40%] sm:left-[54%] w-28 z-10 md:left-[60%] lg:top-20 lg:left-[63%] lg:w-36;
+}
+
+.insta_img_3 {
+   @apply absolute -top-6 sm:-top-12 right-3 w-36 lg:w-48;
+}
+
+.insta_img_4 {
+   @apply absolute top-20 left-8 w-28 z-20 sm:top-4 sm:left-28 md:w-32 lg:w-40 lg:top-0 lg:left-36;
+}
+
+.insta_img_5 {
+   @apply absolute w-24 sm:w-32 md:w-36 h-24 sm:h-32 md:h-36 rounded-full sm:rounded-none top-52 sm:top-56 left-4 md:top-52 md:left-12;
+}
+.insta_img_5 > img {
+   @apply w-full h-full rounded-full sm:rounded-none block;
+}
+
+.insta_img_6 {
+   @apply w-36 h-36 absolute  top-44 sm:top-60  right-8 z-30 md:right-20;
+}
+.insta_img_6 > img {
+   @apply w-full h-full rounded-full sm:rounded-none block;
+}
+
+.insta_img_7 {
+   @apply w-40 h-40  absolute top-64 sm:top-44 right-0 left-0 mx-auto z-20 md:w-48 md:h-48 lg:w-56 lg:h-56;
 }
 
 /* ---------------------------- Footer Designs ---------------------------- */
