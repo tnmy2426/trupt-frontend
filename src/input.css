@@ -50,8 +50,16 @@
 
 /* Components  Layer Custom Design*/
 @layer components {
+   .page_title {
+      @apply capitalize w-full md:text-center pt-8 text-2xl lg:text-3xl xl:text-4xl font-bold;
+   }
+
    .title {
       @apply capitalize text-2xl md:text-3xl text-center;
+   }
+
+   .input_field {
+      @apply w-full border-[1px] border-clr_black py-3 px-4;
    }
 }
 
@@ -474,6 +482,38 @@
 
 .insta_img_7 {
    @apply w-40 h-40  absolute top-64 sm:top-44 right-0 left-0 mx-auto z-20 md:w-48 md:h-48 lg:w-56 lg:h-56;
+}
+
+/* ----------------------------- Sign Up/Login Page Design---------------------------- */
+.auth_page_content {
+   @apply flex flex-col sm:mx-auto max-w-[500px];
+}
+.form_container {
+   @apply pt-8 text-base text-clr_black;
+}
+
+.input_container {
+   @apply flex flex-col space-y-6;
+}
+
+.full_name {
+   @apply flex flex-col space-y-6 md:flex-row md:space-x-4 md:space-y-0;
+}
+
+.form_checkbox {
+   @apply mt-4 flex items-center justify-between text-gray-600;
+}
+
+.checkbox {
+   @apply flex items-center space-x-2;
+}
+
+.form_submit_btn {
+   @apply cursor-pointer text-white text-center py-3 px-1 bg-clr_black;
+}
+
+.form_p {
+   @apply text-gray-600 mt-2;
 }
 
 /* ---------------------------- Footer Designs ---------------------------- */

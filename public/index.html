@@ -374,14 +374,221 @@
          </section>
 
          <!-- Signup Page Section -->
+         <section id="signup" class="py-24">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Create Account</h2>
+                  </div>
+                  <div class="form_container">
+                     <form action="#" method="post">
+                        <div class="input_container">
+                           <div class="full_name">
+                              <input
+                                 type="text"
+                                 name="first_name"
+                                 id="first_name"
+                                 required
+                                 class="input_field"
+                                 placeholder="First Name"
+                              />
+
+                              <input
+                                 type="text"
+                                 name="first_name"
+                                 id="first_name"
+                                 required
+                                 class="input_field"
+                                 placeholder="Last Name"
+                              />
+                           </div>
+
+                           <input type="number" name="mobile" id="mobile" required class="input_field" placeholder="Phone No" />
+
+                           <input type="email" name="email" id="email" required class="input_field" placeholder="Email" />
+
+                           <input
+                              type="password"
+                              name="password"
+                              id="password"
+                              required
+                              class="input_field"
+                              placeholder="Password"
+                           />
+
+                           <input
+                              type="password"
+                              name="password2"
+                              id="password2"
+                              required
+                              class="input_field"
+                              placeholder="Confirm Password"
+                           />
+
+                           <div class="form_submit_btn">
+                              <button type="submit">Agree & Sign Up</button>
+                           </div>
+                        </div>
+                     </form>
+
+                     <div class="text-center mt-10">
+                        <p>
+                           By clicking Agree & Sign Up, you agree to the Amarygo Store
+                           <span class="text-red-600">Terms</span> and <span class="text-red-600">Privacy Policy</span>.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
 
          <!-- Login Page Section -->
+         <section id="login" class="py-24">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Login</h2>
+                  </div>
+                  <div class="form_container">
+                     <form action="#" method="post">
+                        <div class="input_container">
+                           <input type="email" name="email" id="email" required class="input_field" placeholder="Email" />
+                           <input
+                              type="password"
+                              name="password"
+                              id="password"
+                              required
+                              class="input_field"
+                              placeholder="Password"
+                           />
+                           <div class="form_checkbox">
+                              <div class="checkbox">
+                                 <input type="checkbox" name="remember_me" id="radio_btn" />
+                                 <label for="radio_btn">Remember me</label>
+                              </div>
+                              <a href="#">Forgot Password?</a>
+                           </div>
 
-         <!-- Forgot Password Page -->
+                           <div class="form_submit_btn">
+                              <button type="submit">Sign In</button>
+                           </div>
+                        </div>
+                     </form>
 
-         <!-- Password reset email sent -->
+                     <div class="form_checkbox">
+                        <p>Don't have an account?</p>
+                        <a href="#">Create account</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
 
-         <!-- Password reset form page/2 -->
+         <!-- Password reset Page -->
+         <section class="py-24">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Reset Your Password</h2>
+                  </div>
+
+                  <div class="form_container">
+                     <p class="pb-4">We will send you an email to reset your password.</p>
+                     <form action="#" method="post">
+                        <div class="input_container">
+                           <input type="email" name="email" id="email" required class="input_field" placeholder="Email" />
+
+                           <div class="form_submit_btn btn_sm">
+                              <button type="submit">Submit</button>
+                           </div>
+                        </div>
+                     </form>
+
+                     <div class="form_p">
+                        <a href="#">Cancel</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Password reset email sent done -->
+         <section class="py-40">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Password reset email sent</h2>
+                  </div>
+
+                  <div class="form_container">
+                     <p class="text-center">
+                        An email to reset your password has been sent, please
+                        <span class="underline capitalize"><a href="#" class="block">click on the link</a></span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Password reset from key -->
+         <section class="py-24">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Reset Password</h2>
+                  </div>
+                  <div class="form_container">
+                     <form action="#" method="post">
+                        <div class="input_container">
+                           <input
+                              type="password"
+                              name="password"
+                              id="password"
+                              required
+                              class="input_field"
+                              placeholder="Password"
+                           />
+
+                           <input
+                              type="password"
+                              name="confirm_password"
+                              id="confirm_password"
+                              required
+                              class="input_field"
+                              placeholder="Confirm Password"
+                           />
+
+                           <div class="form_submit_btn">
+                              <button type="submit">Reset</button>
+                           </div>
+                        </div>
+                     </form>
+
+                     <div class="form_p mt-2 text-lg text-gray-600">
+                        <a href="#">Cancel</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!-- Password reset from key successful page -->
+         <section class="py-40">
+            <div class="container">
+               <div class="auth_page_content">
+                  <div class="page_title">
+                     <h2>Password reset successful</h2>
+                  </div>
+
+                  <div class="form_container">
+                     <p class="text-center">
+                        Your password reset is successfull. <br />
+                        <span class="underline capitalize"><a href="#" class="block">Back to Home page</a></span>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </section>
 
          <!-- Password reset successful page -->
 
