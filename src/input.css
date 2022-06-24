@@ -20,6 +20,11 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: "Mermaid";
+   src: url("../fonts/Mermaid1001.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,95 +50,15 @@
 
 /* Components  Layer Custom Design*/
 @layer components {
-   /* Common Components */
-   /* .page_title {
-      @apply capitalize w-full md:text-center pt-8 text-3xl lg:text-4xl xl:text-5xl font-bold;
-   } */
-
    .title {
       @apply capitalize text-2xl md:text-3xl text-center;
    }
-
-   /* .card {
-      @apply cursor-pointer relative block;
-   }
-
-   .related_p_card {
-      @apply max-w-[400px] cursor-pointer relative;
-   }
-
-   .card_title {
-      @apply text-3xl text-center px-2 py-4 font-bold;
-   }
-
-   .card_container {
-      @apply overflow-hidden block;
-   }
-
-   .card_img {
-      @apply relative object-cover transition-all duration-300 hover:transform hover:scale-105;
-   }
-
-   .card_body {
-      @apply flex flex-col space-y-1 pl-2 pr-4 pt-2 pb-2;
-   }  */
-
-   /* Card Tags */
-   /* .hot_sale_tag {
-      @apply bg-[#FFA500] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
-   }
-
-   .discount_sale_tag {
-      @apply bg-[#FF0000] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
-   }
-
-   .stock_out_tag {
-      @apply bg-[#B7B7B7] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3 z-20;
-   }
-
-   .add_to_cart_snippet {
-      @apply bg-clr_primary text-sm border-4 border-white w-8 h-8 rounded-full absolute -top-4 -right-4 flex items-center justify-center
-       transition-all duration-300 hover:transform hover:scale-125 z-30;
-   }
-
-   .add_to_cart_snippet > a {
-      @apply block;
-   }
-
-   .price {
-      @apply flex font-semibold;
-   } */
-
-   /* .pagination {
-      @apply flex justify-center items-center space-x-4;
-   }
-   .paging {
-      @apply border-2 border-black px-2 py-1 lg:px-4 cursor-pointer;
-   } */
-
-   /* ... */
-
-   /* .btn_sm {
-      @apply w-[120px];
-   }
-
-   .btn_md {
-      @apply w-[200px] rounded-3xl;
-   }
-
-   .btn_outline {
-      @apply border-[1px] bg-clr_white border-clr_primary transition hover:bg-clr_primary hover:text-clr_white;
-   } */
 }
 
 /* ------------------------------ CUSTOM classes & DESIGNS ---------------------- */
 /* Header Section/Content */
 .top_bar {
    @apply relative bg-clr_primary py-2 flex space-x-4 justify-center text-clr_white uppercase text-xs tracking-wider;
-}
-
-.top_bar > span {
-   font-family: "Tiempos Light";
 }
 
 .dektop_only {
@@ -266,7 +191,11 @@
 /*-------------------- Product Demo section DESIGN ------------------- */
 
 .product_demo {
-   @apply bg-clr_black py-36 relative;
+   @apply bg-clr_black  relative;
+}
+
+.product_demo_2 {
+   @apply bg-[#5e6f2b] relative;
 }
 
 .vertical_line_top {
@@ -305,6 +234,7 @@
 }
 .product_demo_details > h4 {
    line-height: 120%;
+   font-family: "Mermaid";
 }
 
 .product_demo_details > p {
@@ -322,6 +252,66 @@
    @apply uppercase w-48 flex border-[1px] border-clr_secondary bg-transparent  py-3 justify-center items-center;
 }
 
+/*-------------------- Product info section DESIGN ------------------- */
+
+.product_info {
+   @apply text-gray-600;
+}
+
+.product_info {
+   background-image: url("../img/banner/bg.jpg");
+}
+
+.product_info_content {
+   @apply px-5 py-32 mx-auto grid grid-cols-1 gap-y-12 lg:gap-y-0 lg:grid-cols-2 lg:gap-x-8 xl:gap-x-16 2xl:gap-x-20;
+}
+
+.p_info_img {
+   @apply max-w-[520px] mx-auto;
+}
+
+.p_info_img > img {
+   @apply w-full block object-cover;
+}
+
+.p_info_details {
+   @apply lg:pl-4 text-clr_black;
+}
+
+.p_info_title {
+   @apply text-black mb-1 text-4xl lg:text-5xl;
+   line-height: 120%;
+   font-family: "Mermaid" !important;
+   color: rgb(203 108 26) !important;
+}
+
+.product_info_p {
+   @apply mt-8 text-xl text-justify;
+}
+
+.size_box {
+   @apply flex border-t border-gray-200 py-2 mt-8;
+}
+
+.quantity_box {
+   @apply flex border-t border-b mb-6 border-gray-200 py-2;
+}
+
+.divider_box {
+   @apply flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5;
+}
+
+.price_box {
+   @apply flex items-center;
+}
+
+.price_box > span {
+   @apply font-medium text-2xl text-clr_black;
+}
+
+.product_info_btn {
+   @apply border-[1px] border-clr_black bg-transparent py-3 w-44 flex justify-center uppercase;
+}
 /*-------------------- Featured Product section DESIGN ------------------- */
 
 .featured_product {
