@@ -590,13 +590,80 @@
             </div>
          </section>
 
-         <!-- Password reset successful page -->
+         <!--Product Slider Section-->
+         <section class="product_slider_section">
+            <div class="container">
+               <div class="swiper ProductSwiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide my-auto">
+                        <div class="product_slider_content">
+                           <div class="product_slider_img">
+                              <img src="./img/products/slide_1.png" alt="Banner" />
+                           </div>
+                           <div class="product_slider_details">
+                              <span>JOHN PAUL WHITE</span>
+                              <p>
+                                 Four time Grammy Award winner and half of Americana duet, The Civil Wars, John Paul White stepped
+                                 up to crafting his own bourbon
+                              </p>
+                              <a href="#" class="f_product_btn">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
 
-         <!--Mobile Number Verify-->
+                     <div class="swiper-slide my-auto">
+                        <div class="product_slider_content">
+                           <div class="product_slider_img">
+                              <img src="./img/products/slide_2.png" alt="Banner" />
+                           </div>
+                           <div class="product_slider_details">
+                              <span>JOHN PAUL WHITE</span>
+                              <p>
+                                 Four time Grammy Award winner and half of Americana duet, The Civil Wars, John Paul White stepped
+                                 up to crafting his own bourbon
+                              </p>
+                              <a href="#" class="f_product_btn">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
 
-         <!--Email ID Verify page-->
+                     <div class="swiper-slide my-auto">
+                        <div class="product_slider_content">
+                           <div class="product_slider_img">
+                              <img src="./img/products/slide_3.png" alt="Banner" />
+                           </div>
+                           <div class="product_slider_details">
+                              <span>JOHN PAUL WHITE</span>
+                              <p>
+                                 Four time Grammy Award winner and half of Americana duet, The Civil Wars, John Paul White stepped
+                                 up to crafting his own bourbon
+                              </p>
+                              <a href="#" class="f_product_btn">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
 
-         <!--Email Verify page with form-->
+                     <div class="swiper-slide my-auto">
+                        <div class="product_slider_content">
+                           <div class="product_slider_img">
+                              <img src="./img/products/slide_4.png" alt="Banner" />
+                           </div>
+                           <div class="product_slider_details">
+                              <span>JOHN PAUL WHITE</span>
+                              <p>
+                                 Four time Grammy Award winner and half of Americana duet, The Civil Wars, John Paul White stepped
+                                 up to crafting his own bourbon
+                              </p>
+                              <a href="#" class="f_product_btn">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-button-next hidden sm:flex">Next</div>
+                  <div class="swiper-button-prev hidden sm:flex">prev</div>
+               </div>
+            </div>
+         </section>
 
          <!-- Product Details Page -->
 
@@ -610,14 +677,6 @@
 
          <!--Review Section-->
       </main>
-
-      <!--User Order Dashboard Page-->
-
-      <!--User Info Dashboard Page-->
-
-      <!--User address Dashboard Page-->
-
-      <!--User address form Dashboard Page-->
 
       <!-- FOOTER SECTION -->
       <footer class="footer_section">
@@ -693,12 +752,6 @@
       <!-- JS -->
       <script src="./main.js"></script>
 
-      <!-- <script>
-         $(document).ready(function () {
-            $(".select_options").select2();
-         });
-      </script> -->
-
       <!-- Swiper JS -->
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -717,6 +770,18 @@
          });
 
          var swiper = new Swiper(".featuredProductSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            slidesPerGroup: 1,
+            loop: true,
+            loopFillGroupWithBlank: false,
+            navigation: {
+               nextEl: ".swiper-button-next",
+               prevEl: ".swiper-button-prev",
+            },
+         });
+
+         var swiper = new Swiper(".ProductSwiper", {
             slidesPerView: 1,
             spaceBetween: 0,
             slidesPerGroup: 1,
