@@ -79,6 +79,10 @@
    .message {
       @apply block;
    }
+
+   .btn_sm {
+      @apply w-[120px];
+   }
 }
 
 /* ------------------------------ CUSTOM classes & DESIGNS ---------------------- */
@@ -536,18 +540,20 @@
 
 .product_slider_section {
    background-image: url("../img/banner/slider_bg.jpg");
-   /* background-repeat: no-repeat;
+   background-repeat: no-repeat;
    background-size: cover;
-   overflow-x: hidden; */
-   @apply py-36;
+   overflow-x: hidden;
+   width: 100%;
+   height: 90vh;
+   @apply pt-40;
 }
 
 .product_slider_content {
-   @apply my-auto px-4 sm:px-20 grid grid-cols-1 gap-y-12 lg:grid-cols-2 lg:gap-y-0 lg:gap-x-8;
+   @apply px-4 sm:px-20 grid grid-cols-1;
 }
 
 .product_slider_img {
-   @apply w-full m-auto;
+   @apply max-w-[420px] m-auto;
 }
 
 .product_slider_img > img {
@@ -564,6 +570,266 @@
 
 .product_slider_details {
    letter-spacing: 0.2rem;
+}
+
+/* ----------------------------- Cart Page Design---------------------------- */
+
+.cart_page_content {
+   @apply text-clr_black mt-20 flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-10;
+}
+
+.cart_items {
+   @apply w-full lg:w-[60%];
+}
+
+.items_container {
+   @apply w-full flex flex-col space-y-8;
+}
+
+.item {
+   @apply w-full border-b-[1px] px-4 py-4 md:py-0 bg-[#F7F7F7] flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:justify-between sm:items-center;
+}
+
+.item_content {
+   @apply w-full flex flex-col space-y-4 sm:flex-row sm:space-x-12 sm:space-y-0;
+}
+.item_img {
+   @apply max-w-[120px] flex items-center;
+}
+.item_img > img {
+   @apply block object-cover;
+}
+.item_details {
+   @apply w-full flex flex-col space-y-3 md:py-6;
+}
+
+.item_name {
+   @apply text-lg lg:text-xl font-semibold;
+}
+.item_size {
+   @apply flex space-x-2;
+}
+
+.last_block {
+   @apply flex flex-col items-center;
+}
+
+.item_btn_and_price {
+   @apply w-full flex flex-col space-y-4 sm:justify-center sm:float-right;
+}
+
+.item_btn {
+   @apply sm:ml-auto flex items-center justify-around w-[80px] h-12 border-[1px] border-black;
+}
+
+.item_btn > span {
+   @apply font-semibold;
+}
+
+.item_price {
+   @apply flex space-x-2 items-center;
+}
+
+.item_price > strike {
+   @apply text-sm xl:text-lg text-[#949AA3];
+}
+
+.item_price > span {
+   @apply font-bold text-lg lg:text-xl xl:text-2xl;
+}
+
+.item_quantity {
+   @apply mr-auto sm:mr-0 sm:ml-auto text-sm xl:text-lg text-[#949AA3];
+}
+
+.item_remove_btn {
+   @apply inline-block text-base lg:text-lg;
+}
+
+/* Cart Actions */
+.cart_actions {
+   @apply w-full lg:w-[40%];
+}
+.action_container {
+   @apply ml-auto  bg-[#F7F7F7] flex flex-col space-y-4 p-8;
+}
+.action_container > .total_amount {
+   @apply w-full flex justify-between items-center font-bold text-lg lg:text-xl xl:text-2xl;
+}
+
+.action_container > .action_btns {
+   @apply w-full flex flex-col space-y-3;
+}
+
+.action_container > .action_comment {
+   @apply text-center text-lg;
+}
+.checkout_btn {
+   @apply text-center text-lg font-bold bg-clr_black text-clr_white py-3;
+}
+.continue_shopping_btn {
+   @apply py-3 text-center text-lg font-bold bg-clr_white border-[1px] border-clr_black;
+}
+
+/* ------------------------ Checkout Page Design ------------------ */
+.checkout_page {
+   @apply text-clr_black w-full flex flex-col lg:flex-row-reverse;
+}
+
+/* Checkout product content */
+.checkout_product_content {
+   @apply w-full  lg:w-1/2 xl:w-[40%] bg-[#F5F5F5] py-28;
+}
+
+.checkout_product_container {
+   @apply container;
+}
+
+/* Checkout Actions */
+.checkout_actions {
+   @apply flex flex-col space-y-8;
+}
+
+.checkout_product {
+   @apply text-clr_black flex space-x-4 sm:space-x-8 border-b-[1px] border-gray-300 pb-8;
+}
+
+.checkout_product_img {
+   @apply max-w-[80px] relative;
+}
+
+.checkout_product_img_tag {
+   @apply w-5 h-5 rounded-full absolute -top-2 -right-2 bg-gray-400 flex justify-center items-center;
+}
+
+.checkout_product_img_tag > span {
+   @apply text-sm font-semibold;
+}
+
+.checkout_product_img > img {
+   @apply w-full object-cover block;
+}
+
+.checkout_product_details {
+   @apply flex justify-between w-full items-center font-semibold text-lg;
+}
+
+.checkout_product_name {
+   @apply text-lg lg:text-2xl;
+}
+.checkout_product_size {
+   @apply text-gray-400 text-base;
+}
+
+.checkout_price {
+   @apply text-lg sm:text-xl w-fit;
+}
+
+.coupon_box {
+   @apply flex flex-col space-y-4 border-b-[1px] border-gray-300 pb-8;
+}
+
+.coupon_box_input {
+   @apply flex space-x-4;
+}
+
+.coupon_tag {
+   @apply bg-[#E6E6E6] w-fit px-4 py-2 flex space-x-3 items-center;
+}
+
+.coupon_tag > i {
+   @apply text-gray-500;
+}
+
+.cart_amount_details {
+   @apply flex flex-col space-y-2 border-b-[1px] border-gray-300 pb-8 text-lg;
+}
+
+.cart_subtotal {
+   @apply w-full flex justify-between;
+}
+.discount_coupon {
+   @apply hidden sm:flex sm:space-x-2 sm:text-gray-500 sm:items-center;
+}
+.discount_coupon > span {
+   @apply text-sm;
+}
+.shipping_note {
+   @apply font-semibold text-center text-base;
+}
+/* Cart Total */
+.cart_total {
+   @apply pt-8 flex justify-between items-center;
+}
+.cart_total_left > p {
+   @apply font-semibold text-lg;
+}
+.cart_total_left > span {
+   @apply text-xs;
+}
+
+.cart_total_amount {
+   @apply text-2xl font-bold;
+}
+.cart_total_right {
+   @apply flex justify-center items-center space-x-2 text-xs;
+}
+
+/* Checkout information form content */
+.information_content {
+   @apply w-full lg:w-1/2 xl:w-[60%] bg-white py-28;
+}
+
+.information_container {
+   @apply flex flex-col space-y-16 container;
+}
+
+/* Info top content */
+.info_top_content {
+   @apply flex flex-col space-y-3;
+}
+.info_top {
+   @apply flex justify-between items-center;
+}
+.info_top > span {
+   @apply font-semibold text-3xl;
+}
+.info_top > p {
+   @apply text-right text-gray-500;
+}
+.info_top > p > a {
+   @apply text-right text-clr_black;
+}
+
+/* Information Form */
+
+.inputs_container {
+   @apply flex flex-col space-y-4;
+}
+.form_input_full {
+   @apply w-full;
+}
+
+.form_input_two {
+   @apply grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-3;
+}
+.form_input_three {
+   @apply grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-x-3;
+}
+
+.checkbox_input {
+   @apply flex space-x-2 items-center;
+}
+
+.shipping_btn {
+   @apply mt-8 w-[220px] py-3 text-center bg-clr_black text-white text-xl;
+}
+
+.info_bottom_content {
+   @apply border-t-[1px] border-clr_black py-4 flex space-x-6;
+}
+.info_bottom_content > a {
+   @apply text-xs text-clr_black;
 }
 
 /* ---------------------------- Footer Designs ---------------------------- */
