@@ -55,7 +55,7 @@
    }
 
    .title {
-      @apply capitalize text-2xl md:text-3xl text-center;
+      @apply capitalize text-xl lg:text-2xl md:text-3xl text-center;
    }
 
    .input_field {
@@ -221,7 +221,7 @@
 /*-------------------- Product Demo section DESIGN ------------------- */
 
 .product_demo {
-   @apply bg-clr_black  relative;
+   @apply bg-clr_black relative;
 }
 
 .product_demo_2 {
@@ -350,6 +350,44 @@
 .heading {
    @apply text-clr_black w-full text-center text-2xl lg:text-3xl xl:text-4xl;
 }
+
+/*-------------------- Product slider section DESIGN ------------------- */
+
+.product_slider_section {
+   @apply py-8 xl:py-12 2xl:pt-40 2xl:pb-24 relative;
+}
+
+.bg_img {
+   @apply absolute top-0 left-0 right-0 -z-10 w-full h-full;
+}
+.bg_img > img {
+   @apply object-cover;
+}
+
+.product_slider_content {
+   @apply max-w-[700px] mx-auto sm:px-20 grid grid-cols-1 gap-y-8 xl:gap-y-12;
+}
+
+.product_slider_img {
+   @apply w-[320px] xl:w-[420px] m-auto;
+}
+
+.product_slider_img > img {
+   @apply block object-cover m-auto;
+}
+
+.product_slider_details {
+   @apply max-w-[380px] m-auto flex flex-col space-y-4 text-center;
+}
+
+.product_slider_details > span {
+   @apply font-semibold text-xl xl:text-2xl;
+}
+
+.product_slider_details {
+   letter-spacing: 0.2rem;
+}
+
 /*-------------------- Featured Product section DESIGN ------------------- */
 
 .featured_product {
@@ -544,40 +582,6 @@
 
 .form_p {
    @apply text-gray-600 mt-2;
-}
-
-.product_slider_section {
-   background-image: url("../img/banner/slider_bg.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   overflow-x: hidden;
-   width: 100%;
-   height: 90vh;
-   @apply pt-40;
-}
-
-.product_slider_content {
-   @apply px-4 sm:px-20 grid grid-cols-1;
-}
-
-.product_slider_img {
-   @apply max-w-[420px] m-auto;
-}
-
-.product_slider_img > img {
-   @apply block object-cover m-auto;
-}
-
-.product_slider_details {
-   @apply max-w-[320px] m-auto flex flex-col space-y-4;
-}
-
-.product_slider_details > span {
-   @apply font-semibold text-2xl;
-}
-
-.product_slider_details {
-   letter-spacing: 0.2rem;
 }
 
 /* ----------------------------- Cart Page Design---------------------------- */
@@ -838,6 +842,297 @@
 }
 .info_bottom_content > a {
    @apply text-xs text-clr_black;
+}
+
+/* ----------------------------- Product Details Page Design---------------------------- */
+.product_details_page {
+   @apply py-20 w-full;
+}
+
+.product_details_layout {
+   @apply px-4 flex flex-col lg:flex-row 2xl:container;
+}
+
+.product_img_main_container {
+   @apply w-full lg:w-[60%];
+}
+
+.product_gallery {
+   @apply w-full;
+}
+
+.product_img_container {
+   @apply flex flex-col space-y-4 lg:space-y-0 lg:flex-row-reverse lg:justify-end;
+}
+
+.side_img_bar {
+   @apply lg:w-[15%] flex flex-row justify-center lg:justify-start space-x-4 lg:space-x-0 lg:flex-col lg:space-y-4;
+}
+
+.product_details_container {
+   @apply w-full lg:w-[40%];
+}
+
+.sample_img {
+   @apply p-2 max-w-[116px] object-cover;
+}
+
+.active_img {
+   @apply border-[1px] border-clr_black;
+}
+
+.main_img {
+   @apply w-full lg:ml-4 lg:max-w-[600px] object-cover;
+}
+.main_img_desktop > img {
+   @apply mx-auto;
+}
+
+/* Product Details */
+.product_details_container {
+   @apply mt-8 text-gray-400 px-4;
+}
+
+.p_details_top_content {
+   @apply flex flex-col space-y-3 pb-8;
+}
+
+.product_review {
+   @apply flex space-x-3 items-center;
+}
+.ratings {
+   @apply text-yellow-500;
+}
+
+.product_name_main {
+   @apply text-2xl text-clr_black lg:text-3xl  font-semibold;
+}
+
+.product_price_main {
+   @apply text-xl;
+}
+
+.product_price_main > span {
+   @apply text-clr_black text-[22px];
+}
+
+.p_details_mid_content {
+   @apply border-y-[1px] border-gray-300 py-10;
+}
+
+.product_summury {
+   @apply text-justify pb-8;
+}
+
+.p_details_btn_container {
+   @apply flex flex-col space-y-2;
+}
+
+.p_details_btns {
+   @apply flex space-x-3 items-center;
+}
+
+.increase_decrease_btns {
+   @apply h-14 w-32 flex justify-around items-center border-[1px] border-gray-400  text-lg font-medium text-clr_black;
+}
+
+.add_to_cart_btn {
+   @apply w-full flex items-center justify-center h-14 bg-[#313232BF] text-white capitalize cursor-pointer;
+}
+
+.buy_now_btn {
+   @apply bg-clr_primary text-center w-full h-14 text-white flex justify-center items-center capitalize cursor-pointer;
+}
+
+.p_details_bottom_container {
+   @apply bg-clr_secondary text-clr_black;
+}
+
+.p_details_bottom_content {
+   @apply py-8 px-4 grid grid-cols-4 gap-x-2;
+}
+
+.product_highlight {
+   @apply flex flex-col space-y-2 justify-center items-center;
+}
+
+.product_highlight > img {
+   @apply w-12 block object-cover;
+}
+
+.product_highlight > span {
+   @apply uppercase text-xs text-center;
+   font-family: "Nexa Light";
+}
+
+/* Product Description Designs */
+.product_description {
+   @apply my-20 border-t-[1px] border-b-[1px] border-gray-400;
+}
+.description_content {
+   @apply py-20 text-gray-400;
+}
+.description_heading {
+   @apply capitalize text-center text-3xl text-clr_black mb-8;
+}
+.description_heading > h2 {
+   @apply inline-block border-b-[1px] border-clr_black pb-1;
+}
+.description_content > p {
+   @apply py-2 leading-relaxed tracking-wider;
+}
+
+/* Reviews */
+.reviews {
+   @apply py-20;
+}
+
+.review_list {
+   @apply flex flex-col space-y-12;
+}
+
+.review_container {
+   @apply flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 lg:space-x-12 xl:space-x-16 2xl:space-x-20;
+}
+
+.review_content {
+   @apply grid grid-cols-1 gap-y-3;
+}
+
+.review_title {
+   @apply text-lg font-semibold;
+}
+
+.review_text {
+   @apply text-justify;
+}
+
+.review_imgs {
+   @apply flex items-center space-x-4;
+}
+
+.review_imgs > img {
+   @apply block max-w-[100px] max-h-[120px];
+}
+
+/* Review Form */
+.review_form {
+   @apply pt-20;
+}
+
+.review_form > p {
+   @apply text-base text-gray-400;
+}
+.review_form > p > span {
+   @apply text-red-500;
+}
+
+.rating_input {
+   @apply mt-8 flex items-center space-x-4;
+}
+.rating_input {
+   @apply text-lg text-clr_black;
+}
+/* Star Ratings */
+.rating {
+   position: relative;
+   font-size: 30px;
+}
+
+.rating label {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   cursor: pointer;
+}
+
+.rating label:last-child {
+   position: static;
+}
+
+.rating label:nth-child(1) {
+   z-index: 5;
+}
+
+.rating label:nth-child(2) {
+   z-index: 4;
+}
+
+.rating label:nth-child(3) {
+   z-index: 3;
+}
+
+.rating label:nth-child(4) {
+   z-index: 2;
+}
+
+.rating label:nth-child(5) {
+   z-index: 1;
+}
+
+.rating label input {
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+}
+
+.rating label .icon {
+   float: left;
+   color: transparent;
+}
+
+.rating label:last-child .icon {
+   color: #cecece;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+   color: #eab308;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+   color: #cecece;
+   text-shadow: 0 0 5px #eab308;
+}
+
+.review_inputs {
+   @apply grid grid-cols-1 gap-y-4 md:grid-cols-2 gap-x-4;
+}
+
+.review_submit_btn {
+   @apply uppercase font-semibold transition-all duration-200 ease-in-out hover:bg-clr_primary hover:text-white;
+}
+
+.review_inputs > .grid_right {
+   @apply flex flex-col space-y-4;
+}
+
+.review_inputs > .grid_left {
+   @apply w-full h-full;
+}
+
+.review_inputs > .grid_left > textarea {
+   @apply h-60  md:h-full;
+}
+
+/* FAQs Designs */
+.faqs {
+   @apply max-w-[600px] mx-auto mt-12;
+}
+.faq_heading {
+   @apply text-center text-3xl text-clr_black;
+}
+.faq_container {
+   @apply border-b-[1px] border-gray-400;
+}
+.faq {
+   @apply w-full py-4 text-lg font-bold flex justify-between items-center cursor-pointer;
+}
+
+.faq_content {
+   @apply hidden pb-6;
 }
 
 /* ---------------------------- Footer Designs ---------------------------- */

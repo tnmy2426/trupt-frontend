@@ -60,3 +60,46 @@ function closeNav() {
 function closeAlert() {
    document.getElementById("alert_box").style.display = "none";
 }
+
+// ---------------------- Product Details page scripts ---------------------
+
+// Mobile  Product Gallery
+$(".side_img_bar li").on("click", function (event) {
+   var $pic = $(this).find("img");
+   $("#main_img").attr("src", $pic.attr("src"));
+   $(".side_img_bar li").removeClass("active_img");
+   $(this).addClass("active_img");
+});
+
+// Review Images Enlargement
+$(document).ready(function () {
+   $(".review_imgs img").click(function () {
+      this.requestFullscreen();
+   });
+});
+
+// -------------------FAQs scripts for collapse-----------------------
+
+$(document).ready(function () {
+   $("#faq_btn_1").click(function () {
+      $("#faq_content_1").slideToggle("slow");
+   });
+});
+
+$(document).ready(function () {
+   $("#faq_btn_2").click(function () {
+      $("#faq_content_2").slideToggle("slow");
+   });
+});
+
+$(document).ready(function () {
+   $("#faq_btn_3").click(function () {
+      $("#faq_content_3").slideToggle("slow");
+   });
+});
+
+$(document).ready(function () {
+   $("#faq_btn_4").click(function () {
+      $("#faq_content_4").slideToggle("slow");
+   });
+});
