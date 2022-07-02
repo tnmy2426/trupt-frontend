@@ -13,6 +13,7 @@ module.exports = {
             purple_bg: "#EECFFE",
             clr_black: "#1E1E1E",
             clr_white: "#FCF8F3",
+            clr_gray: "#F5F5F5",
          },
       },
       container: {

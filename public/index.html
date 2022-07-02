@@ -258,8 +258,8 @@
          <!--Product Slider Section-->
          <section class="product_slider_section">
             <div class="bg_img">
-               <img src="./img/banner/slider_bg.jpg" class="hidden lg:block" alt="bg-desktop" />
-               <img src="./img/banner/04.jpg" class="lg:hidden" alt="bg-mobile" />
+               <img src="./img/banner/slider_bg.jpg" class="hidden md:block" alt="bg-desktop" />
+               <img src="./img/banner/slider-bg-mobile.jpeg" class="md:hidden" alt="bg-mobile" />
             </div>
             <div class="container">
                <div class="swiper ProductSwiper">
@@ -314,7 +314,7 @@
 
                      <div class="swiper-slide">
                         <div class="product_slider_content">
-                           <div class="product_slider_details pb-4 xl:pb-12">
+                           <div class="product_slider_details pb-10 xl:pb-12">
                               <span>JOHN PAUL WHITE</span>
                               <p>
                                  Four time Grammy Award winner and half of Americana duet, The Civil Wars, John Paul White stepped
@@ -946,7 +946,6 @@
 
          <!--Payment Page-->
 
-         <!-- Product Details Page -->
          <!--Product Details Page-->
          <section class="product_details_page">
             <div class="product_details_layout">
@@ -1002,6 +1001,16 @@
                            </p>
                         </div>
 
+                        <div class="product_set">
+                           <span>quantity</span>
+                           <div class="radio_group">
+                              <input type="radio" id="option-one" name="selector" />
+                              <label for="option-one">1 KG</label>
+                              <input type="radio" id="option-two" name="selector" />
+                              <label for="option-two">2 KG</label>
+                           </div>
+                        </div>
+
                         <div class="p_details_btn_container">
                            <div class="p_details_btns">
                               <div class="increase_decrease_btns">
@@ -1041,10 +1050,6 @@
                               <span>Fast shipping</span>
                            </div>
                         </div>
-
-                        <!-- <div class="product_set">
-
-                        </div> -->
                      </div>
                   </div>
                </div>
@@ -1087,7 +1092,7 @@
             </div>
 
             <!-- Reviews-->
-            <div class="reviews">
+            <div class="pb-20">
                <div class="container">
                   <div class="description_heading">
                      <h2>reviews</h2>
@@ -1310,9 +1315,440 @@
                </div>
             </div>
          </section>
-
-         <!--Review Section-->
       </main>
+
+      <!--User Dashboard Page-->
+      <section>
+         <div class="container">
+            <div class="user_dashboard">
+               <div class="page_title">
+                  <h2 class="text-center">My Account</h2>
+               </div>
+               <div class="user_info_cards">
+                  <a href="#" class="user_info_card">
+                     <div class="info_icon">
+                        <i class="fas fa-gift"></i>
+                     </div>
+                     <div class="info_heading">
+                        <h6>Your orders</h6>
+                     </div>
+                  </a>
+
+                  <a href="#" class="user_info_card">
+                     <div class="info_icon">
+                        <i class="fas fa-info-circle"></i>
+                     </div>
+                     <div class="info_heading">
+                        <h6>Personal info</h6>
+                     </div>
+                  </a>
+
+                  <a href="#" class="user_info_card">
+                     <div class="info_icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                     </div>
+                     <div class="info_heading">
+                        <h6>Your address</h6>
+                     </div>
+                  </a>
+
+                  <a href="#" class="user_info_card">
+                     <div class="info_icon">
+                        <i class="fas fa-sign-out-alt"></i>
+                     </div>
+                     <div class="info_heading">
+                        <h6>logout acoount</h6>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--User Order Dashboard Page-->
+      <section class="user_dash">
+         <div class="container">
+            <div class="page_title">
+               <h2>My Orders</h2>
+            </div>
+            <div class="dash_layout">
+               <div class="side_panel">
+                  <a href="#" class="panel_item active_panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Orders</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content">
+                        <span>Personal Info</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Address</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content border-b-2 border-clr_gray">
+                        <span>logout</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+               </div>
+               <div class="main_panel">
+                  <div class="main_panel_content">
+                     <div class="items_container">
+                        <div class="item">
+                           <div class="first_block">
+                              <div class="item_content">
+                                 <div class="item_img">
+                                    <img src="./img/products/ghee.png" alt="P1" />
+                                 </div>
+                                 <div class="item_details">
+                                    <div class="item_name">
+                                       <h5>Sansakr aahet ha T-Shirt</h5>
+                                    </div>
+                                    <div class="item_size">
+                                       <p><strong>Size:</strong> <span>S</span></p>
+                                    </div>
+                                    <div class="item_remove_btn">
+                                       <a href="#">Remove</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="last_block">
+                              <div class="item_btn_and_price">
+                                 <div class="item_btn">
+                                    <a href="#">-</a>
+                                    <span>1</span>
+                                    <a href="#">+</a>
+                                 </div>
+                                 <div class="item_price">
+                                    <strike>₹420.0</strike>
+                                    <span>₹399.0</span>
+                                 </div>
+                              </div>
+                              <div class="item_quantity">
+                                 <span>₹350.0 x 1</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="item">
+                           <div class="first_block">
+                              <div class="item_content">
+                                 <div class="item_img">
+                                    <img src="./img/products/ghee.png" />
+                                 </div>
+                                 <div class="item_details">
+                                    <div class="item_name">
+                                       <h5>Sansakr aahet ha T-Shirt</h5>
+                                    </div>
+                                    <div class="item_size">
+                                       <p><strong>Size:</strong> <span>S</span></p>
+                                    </div>
+                                    <div class="item_remove_btn">
+                                       <a href="#">Remove</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="last_block">
+                              <div class="item_btn_and_price">
+                                 <div class="item_btn">
+                                    <a href="#">-</a>
+                                    <span>1</span>
+                                    <a href="#">+</a>
+                                 </div>
+                                 <div class="item_price">
+                                    <strike>₹420.0</strike>
+                                    <span>₹399.0</span>
+                                 </div>
+                              </div>
+                              <div class="item_quantity">
+                                 <span>₹350.0 x 1</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--User Info Dashboard Page-->
+      <section class="user_dash">
+         <div class="container">
+            <div class="page_title">
+               <h2 class="text-center">My Info</h2>
+            </div>
+            <div class="dash_layout">
+               <div class="side_panel">
+                  <a href="#" class="panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Orders</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item active_panel_item">
+                     <div class="panel_item_content">
+                        <span>Personal Info</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Address</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content border-b-2 border-clr_gray">
+                        <span>logout</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+               </div>
+               <div class="main_panel">
+                  <div class="main_panel_content">
+                     <div class="user_info_container">
+                        <div class="name">
+                           <div class="form_input">
+                              <label for="first_name">First Name</label>
+                              <input
+                                 type="text"
+                                 name="first_name"
+                                 id="first_name"
+                                 required
+                                 class="input_field"
+                                 value="Abdullah"
+                              />
+                           </div>
+
+                           <div class="form_input">
+                              <label for="first_name">Last Name</label>
+                              <input
+                                 type="text"
+                                 name="first_name"
+                                 id="first_name"
+                                 required
+                                 class="input_field"
+                                 value="Al Nahdi"
+                              />
+                           </div>
+                        </div>
+                        <div class="form_input">
+                           <label for="email">Email</label>
+                           <input
+                              type="email"
+                              name="email"
+                              id="email"
+                              required
+                              class="input_field"
+                              value="al.nahdi.tnmy@gmail.com"
+                           />
+                        </div>
+                        <div class="form_input">
+                           <label for="mobile">Phone No</label>
+                           <input type="number" name="mobile" id="mobile" required class="input_field" placeholder="Mobile No" />
+                        </div>
+                        <div class="form_submit_btn btn_md">
+                           <button type="submit">Save changes</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--User address Dashboard Page-->
+      <section class="user_dash">
+         <div class="container">
+            <div class="page_title">
+               <h2 class="text-center">My Addresses</h2>
+            </div>
+            <div class="dash_layout">
+               <div class="side_panel">
+                  <a href="#" class="panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Orders</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content">
+                        <span>Personal Info</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item active_panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Address</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content border-b-2 border-clr_gray">
+                        <span>logout</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+               </div>
+               <div class="main_panel">
+                  <div class="main_panel_content">
+                     <div class="user_address_container">
+                        <div class="address_card">
+                           <div class="address_card_content">
+                              <div class="card_heading">
+                                 <h6>Shipping Adddress</h6>
+                              </div>
+                              <div class="address_card_btns">
+                                 <a href="#" class="address_card_btn">
+                                    <i class="fas fa-pen"></i>
+                                 </a>
+                                 <a href="#" class="address_card_btn">
+                                    <i class="fas fa-times"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="address_card">
+                           <div class="address_card_content">
+                              <div class="card_heading">
+                                 <h6>Billing Adddress</h6>
+                              </div>
+                              <div class="address_card_btns">
+                                 <a href="#" class="address_card_btn">
+                                    <i class="fas fa-pen"></i>
+                                 </a>
+                                 <a href="#" class="address_card_btn">
+                                    <i class="fas fa-times"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="address_add_btn mt-12">
+                        <a href="#"> Add Address +</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--User address form Dashboard Page-->
+      <section class="user_dash">
+         <div class="container">
+            <div class="page_title">
+               <h2 class="text-center">My Address</h2>
+            </div>
+            <div class="dash_layout">
+               <div class="side_panel">
+                  <a href="#" class="panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Orders</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content">
+                        <span>Personal Info</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item active_panel_item">
+                     <div class="border-y-2 border-clr_gray panel_item_content">
+                        <span>Address</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+                  <a href="#" class="panel_item">
+                     <div class="panel_item_content border-b-2 border-clr_gray">
+                        <span>logout</span>
+                        <i class="fas fa-chevron-right"></i>
+                     </div>
+                  </a>
+               </div>
+               <div class="main_panel">
+                  <div class="main_panel_content">
+                     <div class="address_form_dash">
+                        <div class="form_input">
+                           <label for="address1">Address 1 *</label>
+                           <input
+                              type="text"
+                              name="address1"
+                              id="address1"
+                              required
+                              class="input_field"
+                              placeholder="Address Line 1"
+                           />
+                        </div>
+                        <div class="form_input">
+                           <label for="address2">Address 2 *</label>
+                           <input
+                              type="text"
+                              name="address2"
+                              id="address2"
+                              required
+                              class="input_field"
+                              placeholder="Address Line 2"
+                           />
+                        </div>
+                        <div class="form_input_two">
+                           <div class="form_input">
+                              <label for="state">City / State *</label>
+                              <input
+                                 type="text"
+                                 name="state"
+                                 id="state"
+                                 required
+                                 class="input_field"
+                                 placeholder="Address Line 2"
+                              />
+                           </div>
+
+                           <div class="form_input">
+                              <label for="address_type">Address Type *</label>
+                              <select name="address_type" id="address_type" class="input_field">
+                                 <option value="Shipping">Shipping</option>
+                                 <option value="Billing">Billing</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="form_input_two">
+                           <div class="form_input">
+                              <label for="zipcode">Zip / Postal Code *</label>
+                              <input
+                                 type="text"
+                                 name="zipcode"
+                                 id="zipcode"
+                                 required
+                                 class="input_field"
+                                 placeholder="Zip / Postal Code"
+                              />
+                           </div>
+                        </div>
+                        <div class="checkbox_input">
+                           <label for="checkbox">Default</label>
+                           <input type="checkbox" name="checkbox" id="checkbox" />
+                        </div>
+                        <div class="form_submit_btn btn_md">
+                           <button type="submit">Add Address</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
       <!-- FOOTER SECTION -->
       <footer class="footer_section">

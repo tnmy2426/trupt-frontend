@@ -83,6 +83,10 @@
    .btn_sm {
       @apply w-[120px];
    }
+
+   .btn_md {
+      @apply w-[200px];
+   }
 }
 
 /* ------------------------------ CUSTOM classes & DESIGNS ---------------------- */
@@ -354,14 +358,14 @@
 /*-------------------- Product slider section DESIGN ------------------- */
 
 .product_slider_section {
-   @apply py-8 xl:py-12 2xl:pt-40 2xl:pb-24 relative;
+   @apply py-12 xl:py-12 2xl:pt-40 2xl:pb-24 relative;
 }
 
 .bg_img {
    @apply absolute top-0 left-0 right-0 -z-10 w-full h-full;
 }
 .bg_img > img {
-   @apply object-cover;
+   @apply object-cover w-full h-full block;
 }
 
 .product_slider_content {
@@ -381,10 +385,12 @@
 }
 
 .product_slider_details > span {
-   @apply font-semibold text-xl xl:text-2xl;
+   @apply font-semibold text-base md:text-xl xl:text-2xl;
+   letter-spacing: 0.2rem;
 }
 
-.product_slider_details {
+.product_slider_details > p {
+   @apply text-sm md:text-base;
    letter-spacing: 0.2rem;
 }
 
@@ -490,12 +496,12 @@
 }
 
 .f_product_btn {
-   @apply uppercase text-[#FFFCF2] w-48 flex border-[1px] border-[#B7ADA1] bg-clr_black  py-3 justify-center items-center rounded;
+   @apply text-sm md:text-base uppercase text-[#FFFCF2] max-w-[180px] flex border-[1px] border-[#B7ADA1] bg-clr_black px-6 py-3 justify-center items-center rounded;
 }
 
 /* ---------------------------- Instagram gallery Designs ---------------------------- */
 .insta_gallery {
-   @apply py-20 bg-clr_white;
+   @apply pt-20 pb-40 sm:py-20 bg-clr_white;
 }
 
 .insta_gal_head {
@@ -949,7 +955,7 @@
 }
 
 .p_details_bottom_content {
-   @apply py-8 px-4 grid grid-cols-4 gap-x-2;
+   @apply py-8  grid grid-cols-4 gap-x-2;
 }
 
 .product_highlight {
@@ -963,6 +969,37 @@
 .product_highlight > span {
    @apply uppercase text-xs text-center;
    font-family: "Nexa Light";
+}
+
+.product_set {
+   @apply pb-8 inline-block;
+}
+
+.product_set > span {
+   @apply capitalize text-sm text-clr_primary block;
+}
+
+.radio_group {
+   @apply mt-2  text-sm border-[1px] border-clr_black rounded-3xl overflow-hidden;
+}
+
+.radio_group > input[type="radio"] {
+   position: absolute;
+   visibility: hidden;
+   display: none;
+}
+
+.radio_group > label {
+   @apply text-[#8E9373] bg-white cursor-pointer inline-block px-5 py-2;
+   font-family: "Nexa Bold";
+}
+
+.radio_group > input[type="radio"]:checked + label {
+   @apply text-clr_white bg-[#8E9373] w-fit;
+}
+
+.radio_group > label + input[type="radio"] + label {
+   @apply border-l-[1px] border-clr_black -ml-1;
 }
 
 /* Product Description Designs */
@@ -983,10 +1020,6 @@
 }
 
 /* Reviews */
-.reviews {
-   @apply py-20;
-}
-
 .review_list {
    @apply flex flex-col space-y-12;
 }
@@ -1133,6 +1166,100 @@
 
 .faq_content {
    @apply hidden pb-6;
+}
+
+/* ---------------------------- User Dashboard Designs ---------------------------- */
+
+.user_dashboard {
+   @apply py-20 bg-clr_gray text-clr_black;
+}
+
+.user_info_cards {
+   @apply grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-10 md:gap-y-10 lg:grid-cols-3 mt-20 px-10;
+}
+
+.user_info_card {
+   @apply bg-white flex flex-col space-y-1 items-center justify-center h-48;
+}
+
+.info_icon {
+   @apply text-2xl;
+}
+
+.info_heading {
+   @apply text-lg border-b-[1px] border-clr_black capitalize;
+}
+
+/* ---------------------------- User Order Dashboard Designs ---------------------------- */
+.user_dash {
+   @apply py-12 relative text-clr_black;
+}
+
+.dash_layout {
+   @apply flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:space-x-10 xl:space-x-20 my-20;
+}
+
+.side_panel {
+   @apply w-full lg:w-[30%] lg:sticky lg:top-[124px] lg:left-0 z-40 overflow-x-hidden lg:h-full;
+}
+
+.panel_item {
+   @apply text-lg capitalize font-semibold;
+}
+
+.panel_item_content {
+   @apply py-4 flex justify-between items-center;
+}
+
+.active_panel_item {
+   @apply font-bold;
+}
+
+.main_panel {
+   @apply w-full lg:w-[70%];
+}
+
+/* ---------------------------- User info Dashboard Designs ---------------------------- */
+
+.user_info_container {
+   @apply grid  grid-cols-1 gap-y-4;
+}
+.name {
+   @apply grid grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-4 md:gap-y-0;
+}
+
+/* ---------------------------- User address Dashboard Designs ---------------------------- */
+.user_address_container {
+   @apply grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-0;
+}
+
+.address_card {
+   @apply bg-clr_gray w-full h-32 flex justify-center items-center;
+}
+
+.address_card_content {
+   @apply flex space-x-10 items-center;
+}
+.card_heading {
+   @apply text-lg font-semibold;
+}
+
+.address_card_btns {
+   @apply flex space-x-4;
+}
+
+.address_card_btn {
+   @apply w-12 h-12 rounded-full bg-white flex justify-center items-center;
+}
+
+.address_add_btn {
+   @apply w-full capitalize text-center border-2 border-clr_gray py-4 text-lg font-semibold;
+}
+
+/* ---------------------------- User address Dashboard Designs ---------------------------- */
+
+.address_form_dash {
+   @apply grid grid-cols-1 gap-y-4;
 }
 
 /* ---------------------------- Footer Designs ---------------------------- */
