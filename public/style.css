@@ -765,10 +765,6 @@ h1,
   margin-bottom: 3.5rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .ml-auto {
   margin-left: auto;
 }
@@ -1021,11 +1017,11 @@ h1,
 }
 
 .nav_logo {
-  margin-left: 1rem;
+  margin-left: 1.25rem;
   width: 6rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .nav_logo {
     margin-left: 0px;
   }
@@ -1040,21 +1036,23 @@ h1,
 .secondary_liks {
   display: flex;
   align-items: center;
+}
+
+.secondary_liks > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.secondary_liks {
   padding-right: 0.75rem;
 }
 
-@media (min-width: 640px) {
-  .secondary_liks {
-    margin-right: 0px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .secondary_liks > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(1rem * var(--tw-space-x-reverse));
-    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-  }
+.secondary_liks > a > i {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(30 30 30 / var(--tw-text-opacity));
 }
 
 .cart_icon {
@@ -3461,6 +3459,20 @@ h1,
   color: rgb(30 30 30 / var(--tw-text-opacity));
 }
 
+/* ----------------------------- About Us Page Design---------------------------- */
+
+.about_us {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  --tw-text-opacity: 1;
+  color: rgb(30 30 30 / var(--tw-text-opacity));
+}
+
+.about_us_content {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* ----------------------------- Product Details Page Design---------------------------- */
 
 .product_details_page {
@@ -3801,6 +3813,8 @@ h1,
        column-gap: 0.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .product_highlight {
@@ -4669,10 +4683,6 @@ h1,
   text-transform: capitalize;
 }
 
-.group:hover .group-hover\:block {
-  display: block;
-}
-
 @media (min-width: 640px) {
   .sm\:block {
     display: block;
@@ -4698,6 +4708,10 @@ h1,
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:hidden {
     display: none;
   }

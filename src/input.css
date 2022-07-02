@@ -112,14 +112,18 @@
 }
 
 .nav_logo {
-   @apply w-24 ml-4 sm:ml-0;
+   @apply w-24 ml-5 lg:ml-0;
 }
 .nav_logo > a > img {
    @apply block object-cover;
 }
 
 .secondary_liks {
-   @apply flex items-center lg:space-x-4 pr-3 sm:mr-0;
+   @apply flex items-center space-x-4 pr-3;
+}
+
+.secondary_liks > a > i {
+   @apply text-clr_black text-2xl;
 }
 
 .cart_icon {
@@ -850,6 +854,16 @@
    @apply text-xs text-clr_black;
 }
 
+/* ----------------------------- About Us Page Design---------------------------- */
+
+.about_us {
+   @apply py-20 text-clr_black;
+}
+
+.about_us_content {
+   @apply my-4;
+}
+
 /* ----------------------------- Product Details Page Design---------------------------- */
 .product_details_page {
    @apply py-20 w-full;
@@ -955,7 +969,7 @@
 }
 
 .p_details_bottom_content {
-   @apply py-8  grid grid-cols-4 gap-x-2;
+   @apply py-8 px-4 grid grid-cols-4 gap-x-2;
 }
 
 .product_highlight {
