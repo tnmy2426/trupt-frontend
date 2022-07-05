@@ -615,8 +615,8 @@ h1,
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -2999,8 +2999,8 @@ h1,
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 @media (min-width: 640px) {
@@ -3325,7 +3325,7 @@ h1,
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -3341,54 +3341,6 @@ h1,
 }
 
 .information_container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .information_container {
-    max-width: 640px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .information_container {
-    max-width: 768px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .information_container {
-    max-width: 1024px;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .information_container {
-    max-width: 1280px;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .information_container {
-    max-width: 1536px;
-    padding-right: 2rem;
-    padding-left: 2rem;
-  }
-}
-
-.information_container {
   display: flex;
   flex-direction: column;
 }
@@ -3397,6 +3349,12 @@ h1,
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+@media (min-width: 1024px) {
+  .information_container {
+    padding-right: 1.5rem;
+  }
 }
 
 /* Info top content */
@@ -3552,6 +3510,47 @@ h1,
   margin-bottom: 1rem;
 }
 
+/* ----------------------------- Payment Page Design---------------------------- */
+
+.payment_page {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  --tw-text-opacity: 1;
+  color: rgb(30 30 30 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .payment_page {
+    padding-top: 5rem;
+  }
+}
+
+.payment_page_content {
+  margin-top: 3rem;
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+}
+
+.payment_page_content > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+
+.payment_page_img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 420px;
+}
+
+.payment_page_img > img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* ----------------------------- Product Details Page Design---------------------------- */
 
 .product_details_page {
@@ -3585,8 +3584,8 @@ h1,
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   @media (min-width: 640px) {

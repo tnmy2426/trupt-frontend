@@ -805,11 +805,11 @@
 
 /* Checkout information form content */
 .information_content {
-   @apply w-full lg:w-1/2 xl:w-[60%] bg-white py-24;
+   @apply w-full lg:w-1/2 xl:w-[60%] bg-white pt-24 pb-12;
 }
 
 .information_container {
-   @apply flex flex-col space-y-16 container;
+   @apply flex flex-col space-y-16 lg:pr-6;
 }
 
 /* Info top content */
@@ -868,6 +868,23 @@
 
 .about_us_content {
    @apply my-4;
+}
+
+/* ----------------------------- Payment Page Design---------------------------- */
+.payment_page {
+   @apply pt-12 pb-20 md:pt-20 text-clr_black;
+}
+
+.payment_page_content {
+   @apply mt-12 max-w-[500px] flex flex-col space-y-12;
+}
+
+.payment_page_img {
+   @apply max-w-[420px] mx-auto;
+}
+
+.payment_page_img > img {
+   @apply w-full block object-cover;
 }
 
 /* ----------------------------- Product Details Page Design---------------------------- */
