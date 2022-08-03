@@ -62,6 +62,40 @@
       @apply w-full border-[1px] border-clr_black py-3 px-4;
    }
 
+   /* Product Card */
+   .product_card {
+      @apply max-w-[600px] relative block;
+   }
+
+   .product_card_body {
+      @apply flex flex-col space-y-2;
+   }
+
+   .product_card_text {
+      @apply mt-2 text-clr_black capitalize text-xl;
+   }
+
+   .product_card_price {
+      @apply flex space-x-2 text-clr_black;
+   }
+
+   /* Card Tags */
+   .hot_sale_tag {
+      @apply bg-[#FFA500] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 right-3;
+   }
+
+   .discount_sale_tag {
+      @apply bg-[#FF0000] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 right-3;
+   }
+
+   .discount_sale_tag_left {
+      @apply bg-[#FF0000] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 left-3;
+   }
+
+   .stock_out_tag {
+      @apply bg-[#B7B7B7] inline-block py-[2px] px-3 text-sm font-semibold text-white capitalize absolute top-3 right-3;
+   }
+
    /* Alert Components */
    .alert_box {
       @apply max-w-[500px] absolute right-4 bottom-4 left-4 sm:bottom-5 sm:right-5 sm:left-auto z-50 transition-all duration-300;
@@ -80,12 +114,25 @@
       @apply block;
    }
 
+   /* BUttons */
    .btn_sm {
       @apply w-[120px];
    }
 
    .btn_md {
       @apply w-[200px];
+   }
+
+   .products_grid_layout {
+      @apply mt-12 grid grid-cols-1 gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-16 lg:grid-cols-3 lg:gap-x-12 xl:grid-cols-4 xl:gap-x-10;
+   }
+
+   /* Pagination */
+   .pagination {
+      @apply mt-12 flex justify-center items-center space-x-4;
+   }
+   .paging {
+      @apply border-2 border-clr_black px-2 py-2 lg:px-4 cursor-pointer;
    }
 }
 
@@ -963,10 +1010,6 @@
    @apply text-justify pb-8;
 }
 
-.p_details_btn_container {
-   @apply flex flex-col space-y-2;
-}
-
 .p_details_btns {
    @apply flex space-x-3 items-center;
 }
@@ -976,7 +1019,7 @@
 }
 
 .add_to_cart_btn {
-   @apply w-full flex items-center justify-center h-14 bg-[#487F58] text-white capitalize cursor-pointer;
+   @apply w-full flex items-center justify-center h-14 bg-clr_green text-white capitalize cursor-pointer !important;
 }
 
 .buy_now_btn {
@@ -1005,7 +1048,7 @@
 }
 
 .product_set {
-   @apply pb-8 inline-block;
+   @apply pt-8 w-full;
 }
 
 .product_set > span {
@@ -1013,7 +1056,7 @@
 }
 
 .radio_group {
-   @apply mt-2  text-sm border-[1px] border-clr_black rounded-3xl overflow-hidden;
+   @apply mt-2 inline-block  text-sm border-[1px] border-clr_black rounded-3xl overflow-hidden;
 }
 
 .radio_group > input[type="radio"] {

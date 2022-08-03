@@ -10,10 +10,11 @@ module.exports = {
          colors: {
             clr_primary: "#212806",
             clr_secondary: "#f5eee6",
-            purple_bg: "#EECFFE",
+            // purple_bg: "#EECFFE",
             clr_black: "#1E1E1E",
             clr_white: "#FCF8F3",
             clr_gray: "#F5F5F5",
+            clr_green: "#487F58",
          },
       },
       container: {
